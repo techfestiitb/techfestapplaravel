@@ -1,0 +1,1 @@
+<?php /**PATH /var/app/current/blog/resources/views/layouts/preloader.blade.php ENDPATH**/ ?>

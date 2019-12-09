@@ -19,8 +19,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'HomeController@logout')->name('logout');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
-//Route::get('/profile/edit', 'ProfileController@image_upload');
-//Route::get('/profile/dp_edit', 'ProfileController@dp_upload');
 Route::post('/profile/edit', 'ProfileController@profile_edit')->name('image_upload');
 Route::post('/profile/dp_edit', 'ProfileController@dp_edit')->name('dp_image_upload');
 
@@ -29,6 +27,7 @@ Route::get('/newsfeed/insert', function () {return view('2019.newsfeed.news_inse
 Route::post('/newsfeed/insert', 'NewsfeedController@news_insert');
 
 Route::get('/schedule', 'ScheduleController@schedule')->name('schedule');
+Route::get('/blog', 'BlogController@blog')->name('blog');
 
 
 

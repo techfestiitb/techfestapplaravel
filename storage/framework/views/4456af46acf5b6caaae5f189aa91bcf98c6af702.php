@@ -17,7 +17,6 @@
                             <li class="nav-item"><a class="nav-link" href="<?php echo e(route('login')); ?>">Competitons</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?php echo e(route('login')); ?>">Workshop</a></li>
                             <li class="nav-item"><a class="nav-link" href="<?php echo e(route('login')); ?>">kdjnf</a></li>
-
                     </ul>
                 </div>
             </div>

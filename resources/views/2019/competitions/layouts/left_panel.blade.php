@@ -13,6 +13,9 @@
             @if(!empty($competition_info->timeline))
             <li ><a onclick="myFunction3()">Timeline</a></li>
             @endif
+            @if(!empty($competition_info->rules))
+            <li ><a onclick="myFunction6()">Rules</a></li>
+            @endif
             @if(!empty($competition_info->resources))
                 <li ><a onclick="myFunction4()">Resources</a></li>
             @endif

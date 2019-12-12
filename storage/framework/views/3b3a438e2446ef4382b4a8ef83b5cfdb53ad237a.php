@@ -102,7 +102,7 @@
             }
             ?>
 
-            <div style="background-image: url('<?php echo $image; ?>');background-size: cover;background-position: center;border-radius: 25vw;height: 25vw;width: 25vw">
+            <div style="background-image: url('<?php echo $image; ?>');background-size: cover;background-position: center;border-radius: 25vw;height: 25vw;width: 25vw;margin: auto">
                 <form class="dp_form" id="dp_form" enctype="multipart/form-data" action="<?php echo e(route('dp_image_upload')); ?>"  method="post">
                     <?php echo e(csrf_field()); ?>
 
@@ -119,7 +119,7 @@
             <p style="font-size: 1em;margin: 0px;"><?php echo $user_row->email; ?></p>
             <p style="font-size: 1em;margin: 0px">TF<?php echo $user_row->id; ?></p>
             <p style="font-size: 1em;margin: 0px"><?php echo $user_row->phone; ?></p>
-            <p style="font-size: 1em;margin: 0px">$<?php echo e($xps->xps); ?></p>
+            <p style="font-size: 1em;margin: 0px">$<?php echo e($user_row->xps); ?></p>
 
             <div class="popup" style="position: absolute; right: 0px; top: 10px">
                 <img style="max-width: 100px;" src="data:image/png;base64, <?php echo base64_encode(QrCode::format('png')->color(0,0,0)->merge('http://beta.techfest.org/2019/profile/tf_logo_qr.png', 0.15, true)->size(1000)->generate("$user_row->name,$user_row->email,TF$user_row->id,$user_row->phone")); ?> ">

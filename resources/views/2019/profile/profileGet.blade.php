@@ -102,7 +102,7 @@
             }
             ?>
 
-            <div style="background-image: url('{!! $image !!}');background-size: cover;background-position: center;border-radius: 25vw;height: 25vw;width: 25vw">
+            <div style="background-image: url('{!! $image !!}');background-size: cover;background-position: center;border-radius: 25vw;height: 25vw;width: 25vw;margin: auto">
                 <form class="dp_form" id="dp_form" enctype="multipart/form-data" action="{{ route('dp_image_upload') }}"  method="post">
                     {{csrf_field()}}
                     <label for="file_dp">
@@ -118,7 +118,7 @@
             <p style="font-size: 1em;margin: 0px;">{!! $user_row->email !!}</p>
             <p style="font-size: 1em;margin: 0px">TF{!! $user_row->id !!}</p>
             <p style="font-size: 1em;margin: 0px">{!! $user_row->phone !!}</p>
-            <p style="font-size: 1em;margin: 0px">${{ $xps->xps }}</p>
+            <p style="font-size: 1em;margin: 0px">${{ $user_row->xps }}</p>
 
             <div class="popup" style="position: absolute; right: 0px; top: 10px">
                 <img style="max-width: 100px;" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->color(0,0,0)->merge('http://beta.techfest.org/2019/profile/tf_logo_qr.png', 0.15, true)->size(1000)->generate("$user_row->name,$user_row->email,TF$user_row->id,$user_row->phone")) !!} ">

@@ -361,11 +361,7 @@
                             <hr style="color: white; border: 1px solid white">
                             <h3 style="color: white"><?php echo $competition_info->prize_money; ?></h3>
 
-                            <p style="font-size: 15px;padding: 3%;width: 100%;font-family: Lato;color: white;text-align: justify;margin-bottom: .5em;">
-                                <?php echo $competition_info->task; ?>
-
-                                <br><br><strong>THERE IS NO REGISTRATION FEES</strong>
-                            </p>
+                            <p style="font-size: 15px;padding: 3%;width: 100%;font-family: Lato;color: white;text-align: justify;margin-bottom: .5em;"><?php echo $competition_info->task; ?><br><br><strong>THERE IS NO REGISTRATION FEES</strong></p>
 
                             <?php if(!empty($user_row->email)): ?>
                                 <?php

@@ -16,10 +16,10 @@ use Redirect;
 class MainController extends Controller
 {
     public function competition_name_Get($competition_name){
-        $competition_info = DB::table('competition_info')->where(['link'=>$competition_name])->first();
+        $competition_info = DB::table('competitions')->where(['link'=>$competition_name])->first();
         if(!empty($competition_info)){
             if(!Auth::user()){
-                return view('2019.competitions.layouts.competitionGet')-with(['competition_info' => $competition_info]);
+                return view('2019.competitions.layouts.competitionGet')->with(['competition_info' => $competition_info]);
             }
             if(Auth::user()){
                 $user_row = DB::table('tf_reg')->where(['email' => Auth::user()->email])->first();
@@ -28,7 +28,7 @@ class MainController extends Controller
         }else  return redirect("/competitions/");
     }
     public function competition_name_reg(Request $request, $competition_name){
-        $competition_info = DB::table('competition_info')->where(['link'=>$competition_name])->first();
+        $competition_info = DB::table('competitions')->where(['link'=>$competition_name])->first();
 
         $user_row = DB::table('tf_reg')->where(['email' => Auth::user()->email])->first();// return the first row containing the user(session wala user)
         DB::table('tf_reg')->where(['email'=>Auth::user()->email])->update(["$competition_name"=>'1']);
@@ -66,7 +66,7 @@ Regards";
     }
     public function competition_name_create_team_reg(Request $data,$competition_name){
         if (Auth::user()) {
-            $competition_info = DB::table('competition_info')->where(['link'=>$competition_name])->first();
+            $competition_info = DB::table('competitions')->where(['link'=>$competition_name])->first();
             $competition_info_team = $competition_name."_team";
             $competition_info_team_id = $competition_name."_team_id";
             $current_user_data = DB::table('tf_reg')->where(['email' => Auth::user()->email])->first();
@@ -152,7 +152,7 @@ Regards.";
         else return Redirect::back()->withErrors(["first signin"]);
     }
     public function competition_name_remove_member($competition_name, $id){
-        $competition_info = DB::table('competition_info')->where(['link'=>$competition_name])->first();
+        $competition_info = DB::table('competitions')->where(['link'=>$competition_name])->first();
         $competition_info_team = $competition_name."_team";
         $user_row = DB::table('tf_reg')->where(['id' => $id])->first();
         $subject = "$competition_info->name, Techfest IIT Bombay";
@@ -178,7 +178,7 @@ Regards.";
     //2019 controllers for links
     public function competitions(){
         if(!Auth::user()){
-            return view('2019.competitions.competitions');
+            return redirect('/login');
         }
         if(Auth::user()){
             $user_row = DB::table('tf_reg')->where(['email' => Auth::user()->email])->first();// return the first row containing the user(session wala user)

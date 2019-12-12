@@ -16,22 +16,39 @@ Route::get('/', function () {return view('home');});
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/logout', 'HomeController@logout')->name('logout');
 
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::post('/profile/edit', 'ProfileController@profile_edit')->name('image_upload');
-Route::post('/profile/dp_edit', 'ProfileController@dp_edit')->name('dp_image_upload');
+Route::get('/schedule', 'ScheduleController@schedule')->name('schedule');
+Route::get('/blog', 'BlogController@blog')->name('blog');
 
 Route::get('/newsfeed', 'NewsfeedController@newsfeed')->name('newsfeed');
 Route::get('/newsfeed/insert', function () {return view('2019.newsfeed.news_insert');});
 Route::post('/newsfeed/insert', 'NewsfeedController@news_insert');
 
-Route::get('/schedule', 'ScheduleController@schedule')->name('schedule');
-Route::get('/blog', 'BlogController@blog')->name('blog');
+
+Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::post('/profile/edit', 'ProfileController@profile_edit')->name('image_upload');
+Route::post('/profile/dp_edit', 'ProfileController@dp_edit')->name('dp_image_upload');
 
 
+Route::get('/robowars/betting/', 'robowarsController@view_home');
+Route::get('/robowars/betting/leaderboard', 'robowarsController@view_leaderboard');
+Route::get('/robowars/betting/bet', 'robowarsController@view_bet');
 
 
+Route::get('/media', function () {return view('2019.media.media');})->name('media');
+Route::get('/twmun', function () {return view('2019.twmun.twmun');})->name('twmun');
+Route::get('/contact-us', function () {return view('2019.contact_us.contact_us');})->name('contact_us');
+Route::get('/summit', function () {return view('2019.summit.summit');})->name('summit');
+Route::get('/initiatives', function () {return view('2019.initiatives.initiatives');})->name('initiatives');
+Route::get('/initiatives/aiflt', function () {return view('2019.initiatives.aiflt');})->name('aiflt');
+Route::get('/initiatives/bolt', function () {return view('2019.initiatives.bolt');})->name('bolt');
+Route::get('/lectures', 'WebpagesController@lectures')->name('lectures');
+Route::get('/exhibitions', 'WebpagesController@exhibitions')->name('exhibitions');
+Route::redirect('/esports', 'http://techfest.org/gamersleague')->name('esports');
+Route::redirect('/ift', 'http://techfest.org/ift')->name('ift');
+Route::redirect('/robowars', 'http://techfest.org/robowars')->name('robowars');
+
+Route::get('/competitions', 'MainController@competitions')->name('competitions');
 
 
 
@@ -59,13 +76,14 @@ Route::get('/tf/logout','CaController@ca_logout')->name('ca_logout');
 Route::get('/imgupload/{id}','CaController@imgupload');
 Route::post('/imgupload/{id}','CaController@ca_image_upload');
 
-Route::get('/robowars', function () {return view('2019.robowars.robowars');});
-Route::redirect('/robowars19/', '/robowars/');
-Route::redirect('/robowar/', '/robowars/');
-Route::redirect('/robowar18/', '/robowars/');
-Route::get('/robowars/form', 'webpagesController@robowars_form');
-Route::post('/robowars/form', 'webpagesController@robowars_form_reg');
-
+//
+//Route::get('/robowars', function () {return view('2019.robowars.robowars');});
+//Route::redirect('/robowars19/', '/robowars/');
+//Route::redirect('/robowar/', '/robowars/');
+//Route::redirect('/robowar18/', '/robowars/');
+//Route::get('/robowars/form', 'webpagesController@robowars_form');
+//Route::post('/robowars/form', 'webpagesController@robowars_form_reg');
+//
 
 
 
@@ -76,7 +94,7 @@ Route::post('/robowars/form', 'webpagesController@robowars_form_reg');
 // 2019 links
 Route::get('/competitions/logout', 'MainController@competitions_logout');
 
-Route::get('/competitions', 'MainController@competitions');
+//Route::get('/competitions', 'MainController@competitions');
 Route::post('/competitions', 'MainController@competitions');
 Route::redirect('/technorion', 'http://techfest.org/competitions#techno-section');
 Route::redirect('/ideate', 'http://techfest.org/competitions');

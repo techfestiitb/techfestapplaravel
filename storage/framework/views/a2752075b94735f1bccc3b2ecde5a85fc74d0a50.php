@@ -14,7 +14,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="<?php echo e(route('logout')); ?>">Logout</a></li>
+                        <li class="nav-item">
+                            <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
+                               onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                <?php echo e(__('Logout')); ?>
+
+                            </a>
+
+                            <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                                <?php echo csrf_field(); ?>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>

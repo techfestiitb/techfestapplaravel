@@ -58,7 +58,16 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="<?php echo e(route('newsfeed')); ?>">Newsfeed</a>
                                 <a class="dropdown-item" href="<?php echo e(route('profile')); ?>">Profile</a>
-                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>">Logout</a>
+                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
+                                   onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                    <?php echo e(__('Logout')); ?>
+
+                                </a>
+
+                                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                                    <?php echo csrf_field(); ?>
+                                </form>
                             </div>
                         </li>
                     <?php endif; ?>

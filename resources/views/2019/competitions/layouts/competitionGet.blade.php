@@ -361,10 +361,7 @@
                             <hr style="color: white; border: 1px solid white">
                             <h3 style="color: white">{!! $competition_info->prize_money !!}</h3>
 
-                            <p style="font-size: 15px;padding: 3%;width: 100%;font-family: Lato;color: white;text-align: justify;margin-bottom: .5em;">
-                                {!! $competition_info->task !!}
-                                <br><br><strong>THERE IS NO REGISTRATION FEES</strong>
-                            </p>
+                            <p style="font-size: 15px;padding: 3%;width: 100%;font-family: Lato;color: white;text-align: justify;margin-bottom: .5em;">{!! $competition_info->task !!}<br><br><strong>THERE IS NO REGISTRATION FEES</strong></p>
 
                             @if(!empty($user_row->email))
                                 <?php
@@ -535,6 +532,12 @@
 <script>
     function myFunction5() {
         document.getElementById("text_change").innerHTML = "<br>{!! $competition_info->contact_us !!}<br><br> ";
+        document.body.click("body");
+    }
+</script>
+<script>
+    function myFunction6() {
+        document.getElementById("text_change").innerHTML = "<br>{!! $competition_info->rules !!}<br><br> ";
         document.body.click("body");
     }
 </script>

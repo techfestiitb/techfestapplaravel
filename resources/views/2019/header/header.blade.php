@@ -2,10 +2,12 @@
     <div id="app" style="width: 100%">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container" style="width: 100%;">
-                <div class="col-1" style="text-align: center;">
+                <div class="col-1" style="text-align: center;padding-left: 0px;padding-right: 0px;">
+                    @if(Request::url() != "http://app.techfest.org/schedule")
                     <a href="{{ URL::previous() }}">
                         <img src="/2019/profile/left-arrow.png" alt="" style="max-height: 3.5vh">
                     </a>
+                        @endif
                 </div>
                 <div class="col-8" style="text-align: center;">
                     <img src="http://techfest.org/2019/tf_date_black.png" alt="" style="max-height: 4vh">
@@ -17,20 +19,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-{{--                            <li class="nav-item"><a class="nav-link" href="{{ route('media') }}">Media</a></li>--}}
-                            <li class="nav-item"><a class="nav-link" href="{{ route('initiatives') }}">Initiatives</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('summit') }}">Summit</a></li>
+                        {{--                            <li class="nav-item"><a class="nav-link" href="{{ route('media') }}">Media</a></li>--}}
+                            <li class="nav-item"><a class="nav-link" href="{{ route('initiatives') }}">Initiatives--</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('summit') }}">Summit--</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('twmun') }}">TWMUN--</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('lectures') }}">Lectures--</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('exhibitions') }}">Exhibitions--</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Workshops</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('competitions') }}">Competition</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('workshops') }}">Workshops--</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('competitions') }}">Competition--</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('esports') }}">Esports--</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('ift') }}">IFT</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('robowars') }}">Robowars</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('ift') }}">IFT--</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('robowars') }}">Robowars--</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Technoholix</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('contact_us') }}">Ozone</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('contact_us') }}">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('ozone') }}">Ozone--</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('contact_us') }}">Contact Us--</a></li>
 
                     </ul>
                 </div>

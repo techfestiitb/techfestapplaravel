@@ -410,79 +410,8 @@
 {{--<img class="bg_1" src="/2019/compi/images/web_backgrounds_1.png" alt="">--}}
 {{--<img class="bg_2" src="/2019/compi/images/web_backgrounds_1.png" alt="">--}}
 <a class="motion_bounce" href="#techno-section"><div  class="arrow bounce"></div></a>
-
-<img class="mandala1" src="/2019/homepage/images/b_mandala.png" >
-<img class="mandala2" src="/2019/homepage/images/b_mandala.png" >
-
 <img class="desktop_logo" src="/2019/summit/images/sbi.png" alt="" style="max-height: 200px;position: absolute;z-index: 1;right: 1%;top: 1%;" >
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="/" style="font-family: Lato"><img src="/2019/tf_date.png" alt="" style="max-height: 50px; z-index: 2; "></a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav nav ml-auto">
-                <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-                <li class="nav-item"><a href="#techno-section" class="nav-link"><span>Technorion</span></a></li>
-                <li class="nav-item"><a href="#compi-section" class="nav-link"><span>Competitions</span></a></li>
-                <li class="nav-item"><a href="#ideate-section" class="nav-link"><span>Ideate</span></a></li>
-                {{--                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact Us</span></a></li>--}}
-                <li class="nav-item"><a href="#section-counter" class="nav-link"><span>Stats</span></a></li>
-
-                @if(empty( $user_row->email))
-                    <li class="nav-item" id="signinButton">
-                        <a href="#" class="nav-link" id="signinButton"><span> Sign In</span></a>
-                    </li>
-                    <form action="" method="post" id="h-form" class="">
-                        {{csrf_field()}}
-                        <input type="hidden" name ="code" id="name2" style="background-color: blue">
-                    </form>
-                @endif
-                @if(!empty($user_row->email))
-
-                    <li class="nav-item dropdown">
-                        <span class="nav-link">PROFILE</span>
-
-                        <div class="dropdown-content">
-                            <a href="/competitions/details_form" style="color: black">Personal Details</a><br>
-{{--                            @if($user_row->cozmo > 0)--}}
-{{--                                <a href="/competitions/cozmo/" style="color: black">Cozmo Clench</a><br>--}}
-{{--                            @endif--}}
-{{--                            @if($user_row->meshmerize > 0)--}}
-{{--                                <a href="/competitions/meshmerize/" style="color: black">Meshmerize</a><br>--}}
-{{--                            @endif--}}
-{{--                            @if($user_row->micromouse > 0)--}}
-{{--                                <a href="/competitions/micromouse/" style="color: black">Micromouse</a><br>--}}
-{{--                            @endif--}}
-{{--                            @if($user_row->tso > 0)--}}
-{{--                                <a href="/competitions/tso/" style="color: black">Techfest Olympiad</a><br>--}}
-{{--                            @endif--}}
-{{--                            @if($user_row->codecode > 0)--}}
-{{--                                <a href="/competitions/codecode/" style="color: black">Codecode</a><br>--}}
-{{--                            @endif--}}
-{{--                            @if($user_row->earthmatters > 0)--}}
-{{--                                <a href="/competitions/earthmatters/" style="color: black">Earth Matters</a><br>--}}
-{{--                            @endif--}}
-{{--                            @if($user_row->innovationeering > 0)--}}
-{{--                                <a href="/competitions/innovationeering/" style="color: black">Innovationeering</a><br>--}}
-{{--                            @if($user_row->innovationeering > 0)--}}
-{{--                            @endif--}}
-{{--                                <a href="/competitions/innovationeering/" style="color: black">Civilisation Metamorphosis</a><br>--}}
-{{--                            @endif--}}
-                            <a href="/competitions/logout" style="color: black">Logout</a>
-                        </div>
-                    </li>
-                @endif
-
-
-
-
-            </ul>
-        </div>
-    </div>
-</nav>
+@include('2019.header.header')
 
 <section class="home-slider js-fullheight owl-carousel" style="pointer-events: none;">
 
@@ -506,150 +435,12 @@
 
 </section>
 
-
-
-<section class="recent_bloger_area" id="techno-section" style="z-index: 2; padding:0px;    background: transparent;">
-    <div class="container" style="z-index: 2;left: 0px">
-        <div class="col-xs-8 col-sm-5" style="z-index: 2;">
-            <div style="z-index: 2;">
-                <h2 style="position: absolute; margin-top: 15px; z-index: 2; font-weight: bold; color: black">Technorion</h2>
-                <img style="z-index: 2;" class="arrow1" src="/2019/Heading.svg" alt="" >
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-5" style="z-index: 1;">
-                <div class="techno_text">
-
-                    <img  style="z-index: 2;" class="arrow5" src="/2019/compi/images/techno-min.png" alt="" >
-                    <p>
-                        With an aim to promote creative, innovative and technical skills amongst the youth, Techfest is expanding its reach by conducting Technorion, our Zonal competitions in multiple cities. We don’t want distance to play a role in hindering innovative minds from participating in Techfest Competitions. This year Technorion will be conducted in the following cities:
-                    </p>
-                    <div class="row" style="padding-left: 4.5%; ">
-                        <div class="col-xs-12" >
-                            <ul>
-                                <li><br>University of Engineering and Management, Kolkata: <br>28 <sup>th</sup>  September</li>
-                                <li><br>Oriental Institute of Science and Technology, Bhopal: <br>29 <sup>th</sup>  September</li>
-                                <li><br>B.N College of Engineering and Technology. Lucknow: <br>13 <sup>th</sup>  October </li>
-                                <li><br>B.M.S Institute of Technology and Management, Bangalore:<br> 6 <sup>th</sup>  October</li>
-                                <li><br>Swami Keshvanand Institute of Technology, Jaipur:<br> 6 <sup>th</sup>  October</li>
-                                <li><br>Indian Institute of Technology Bombay:<br> 6 <sup>th</sup>  October</li>
-                            </ul>
-                        </div>
-                        <div class="co0xs-1"></div>
-{{--                        <div class="col-xs-6">--}}
-{{--                            <ul>--}}
-{{--                                <li><br>   : </li>--}}
-{{--                                <li><br>   : </li>--}}
-{{--                                <li><br>   : </li>--}}
-{{--                                <li><br>   : </li>--}}
-{{--                                <li><br>   : </li>--}}
-{{--                                <li><br>   : </li>--}}
-{{--                            </ul>--}}
-{{--                        </div>--}}
-                    </div>
-                </div><br>
-            </div>
-            <div class="col-md-7">
-                <div class="row">
-                    <div class="col-xs-3 col-md-6" style="z-index: 1" >
-                        <div class="recent_blog_item " style="margin-bottom: 0px">
-                            <div class="blog_img shadow  " >
-                                <img src="/2019/compi/images/cozmo2.jpeg" style="background-size: cover; width: 100%; height: "  alt="">
-
-                            </div>
-                            <div class="middle">
-                                <div class="text ram1" >Build a manually controlled gripper bot to do simple tasks and complete the run by earning maximum points in minimum time</div>
-                                {{--                                 Two statements likho--}}
-                            </div>
-                            <div class="recent_blog_text" >
-                                <div class="recent_blog_text_inner" >
-                                    <h6><a href="/competitions/wcozmo" style="font-family: Lato;font-weight: bold;color: white!important;">Explore</a></h6>
-                                    <a ><h5 style="padding: 0px; font-size: 20px;"style="font-family: Lato">Cozmo Clench(wild card)</h5></a>
-                                    <p style="padding: 0px; font-family: Lato">PRIZE MONEY: INR 82,500/- </p>
-
-                                    <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
-                                    <!--                                    <a href="#">No Comments</a>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3 col-md-6" style="z-index: 1">
-                        <div class="recent_blog_item" style="margin-bottom: 0px">
-                            <div class="blog_img shadow">
-                                <img src="/2019/compi/images/meshme.jpg" style="background-size: cover; width: 100%" alt="">
-
-                            </div>
-                            <div class="middle">
-                                <div class="text ram1" >Build a line follower bot which navigates through the maze and completes the task in minimum time</div>
-                            </div>
-                            <div class="recent_blog_text">
-                                <div class="recent_blog_text_inner">
-                                    <h6><a href="/competitions/wmeshmerize" style="font-family: Lato;font-weight: bold; color: white!important;">Explore</a></h6>
-                                    <a href="/competitions/wmeshmerize"><h5 style="padding: 0px; font-family: Lato">Meshmerize(wild card)</h5></a>
-                                    <p style="padding: 0px; font-family: Lato" >PRIZE MONEY: INR 82,500/- </p>
-                                    <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
-                                    <!--                                    <a href="#">No Comments</a>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3 col-md-6" style="z-index: 1">
-                        <div class="recent_blog_item" style="margin-bottom: 0px">
-                            <div class="blog_img shadow">
-                                <img src="/2019/compi/images/codecode2.jpeg" style="background-size: cover; width: 100%" alt="">
-                            </div>
-                            <div class="middle">
-                                <div class="text ram1" >Teams are required to solve real-life problems through coding. Challenge yourself to efficiently solve coding questions</div>
-                            </div>
-                            <div class="recent_blog_text">
-                                <div class="recent_blog_text_inner">
-                                    <h6><a href="/competitions/wcodecode" style="font-family: Lato;font-weight: bold; color: white!important;">Explore</a></h6>
-                                    <a href="/competitions/wcodecode"><h5 style="padding: 0px; font-family: Lato">CoDecode(wild card)</h5></a>
-                                    <p style="padding: 0px; font-family: Lato">PRIZE MONEY: INR 37,000/- </p>
-                                    <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
-                                    <!--                                    <a href="#">No Comments</a>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-3 col-md-6" style="z-index: 1">
-                        <div class="recent_blog_item " style="margin-bottom: 0px">
-                            <div class="blog_img shadow ">
-                                <img src="/2019/compi/images/School2.jpeg" style="background-size: cover; width: 100%" alt="">
-                            </div>
-                            <div class="middle">
-                                <div class="text ram1">Competition aimed towards nurturing young minds of young School students to test their mental, creative and analytical skills</div>
-                            </div>
-                            <div class="recent_blog_text" >
-                                <div class="recent_blog_text_inner" >
-                                    <h6><a href="/competitions/tso" style="font-family: Lato;font-weight: bold; color: white!important;">Explore</a></h6>
-                                    <a ><h5 style="padding: 0px; font-family: Lato">Techfest Olympiad</h5></a>
-                                    <p style="padding: 0px; font-family: Lato">PRIZES WORTH INR 25,000/- </p>
-                                    <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
-                                    <!--                                    <a href="#">No Comments</a>-->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
 <!--================End Recent Blog Area =================-->
 <section class="recent_bloger_area"  style="padding-top: 0px;background: transparent;">
     <div class="container" style="z-index: 2">
-        <div class="col-xs-8 col-sm-5">
-            <div>
-                <h2 style="position: absolute; margin-left: -18px;margin-top: 15px; font-weight: bold; color:black ;">International Competitions</h2>
-                <img class="arrow2" src="/2019/Heading.svg" alt="" >
-            </div>
-        </div>
         <div class="row">
             {{--            wpc--}}
-            <div class="col-xs-3 col-md-4" style="z-index: 1" >
+            <div class="col-xs-3 col-md-4" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/wpc.jpg" style="background-size: cover;width: 100%" alt="">
@@ -669,10 +460,10 @@
                 </div>
             </div>
             {{--            ift--}}
-            <div class="col-xs-3 col-md-4" style="z-index: 1" >
+            <div class="col-xs-3 col-md-4" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
-                        <img src="/2019/ift_image.jpeg" style="background-size: cover;width: 100%" alt="">
+                        <img src="http://techfest.org/2019/ift_image.jpeg" style="background-size: cover;width: 100%" alt="">
                     </div>
                     <div class="middle">
                         <div class="text ram2" >Operate remote controlled nitro-buggy cars on an off-road dirt track to dominate the Techfest International Full Throttle circuit. </div>
@@ -690,7 +481,7 @@
                 </div>
             </div>
             {{--            micromouse--}}
-            <div class="col-xs-3 col-md-4" style="z-index: 1" >
+            <div class="col-xs-3 col-md-4" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/images/micro2.jpg" style="background-size: cover;width: 100%" alt="">
@@ -714,14 +505,88 @@
 
 <section class="recent_bloger_area" id="compi-section" style="padding-top: 0px;background: transparent;">
     <div class="container" style="z-index: 2">
-        <div class="col-xs-8 col-sm-5">
-            <div>
-                <h2 style="position: absolute; margin-left: -18px;margin-top: 15px; font-weight: bold; color:black ;">Competitions</h2>
-                <img class="arrow2" src="/2019/Heading.svg" alt="" >
-            </div>
-        </div>
         <div class="row">
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-6" style="z-index: 0" >
+                <div class="recent_blog_item " style="margin-bottom: 0px">
+                    <div class="blog_img shadow  " >
+                        <img src="/2019/compi/images/cozmo2.jpeg" style="background-size: cover; width: 100%;"  alt="">
+
+                    </div>
+                    <div class="middle">
+                        <div class="text ram1" >Build a manually controlled gripper bot to do simple tasks and complete the run by earning maximum points in minimum time</div>
+                        {{--                                 Two statements likho--}}
+                    </div>
+                    <div class="recent_blog_text" >
+                        <div class="recent_blog_text_inner" >
+                            <h6><a href="/competitions/wcozmo" style="font-family: Lato;font-weight: bold;color: white!important;">Explore</a></h6>
+                            <a ><h5 style="padding: 0px; font-size: 20px;"style="font-family: Lato">Cozmo Clench(wild card)</h5></a>
+                            <p style="padding: 0px; font-family: Lato">PRIZE MONEY: INR 82,500/- </p>
+
+                            <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
+                            <!--                                    <a href="#">No Comments</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-6" style="z-index: 0">
+                <div class="recent_blog_item" style="margin-bottom: 0px">
+                    <div class="blog_img shadow">
+                        <img src="/2019/compi/images/meshme.jpg" style="background-size: cover; width: 100%" alt="">
+
+                    </div>
+                    <div class="middle">
+                        <div class="text ram1" >Build a line follower bot which navigates through the maze and completes the task in minimum time</div>
+                    </div>
+                    <div class="recent_blog_text">
+                        <div class="recent_blog_text_inner">
+                            <h6><a href="/competitions/wmeshmerize" style="font-family: Lato;font-weight: bold; color: white!important;">Explore</a></h6>
+                            <a href="/competitions/wmeshmerize"><h5 style="padding: 0px; font-family: Lato">Meshmerize(wild card)</h5></a>
+                            <p style="padding: 0px; font-family: Lato" >PRIZE MONEY: INR 82,500/- </p>
+                            <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
+                            <!--                                    <a href="#">No Comments</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-6" style="z-index: 0">
+                <div class="recent_blog_item" style="margin-bottom: 0px">
+                    <div class="blog_img shadow">
+                        <img src="/2019/compi/images/codecode2.jpeg" style="background-size: cover; width: 100%" alt="">
+                    </div>
+                    <div class="middle">
+                        <div class="text ram1" >Teams are required to solve real-life problems through coding. Challenge yourself to efficiently solve coding questions</div>
+                    </div>
+                    <div class="recent_blog_text">
+                        <div class="recent_blog_text_inner">
+                            <h6><a href="/competitions/wcodecode" style="font-family: Lato;font-weight: bold; color: white!important;">Explore</a></h6>
+                            <a href="/competitions/wcodecode"><h5 style="padding: 0px; font-family: Lato">CoDecode(wild card)</h5></a>
+                            <p style="padding: 0px; font-family: Lato">PRIZE MONEY: INR 37,000/- </p>
+                            <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
+                            <!--                                    <a href="#">No Comments</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-6" style="z-index: 0">
+                <div class="recent_blog_item " style="margin-bottom: 0px">
+                    <div class="blog_img shadow ">
+                        <img src="/2019/compi/images/School2.jpeg" style="background-size: cover; width: 100%" alt="">
+                    </div>
+                    <div class="middle">
+                        <div class="text ram1">Competition aimed towards nurturing young minds of young School students to test their mental, creative and analytical skills</div>
+                    </div>
+                    <div class="recent_blog_text" >
+                        <div class="recent_blog_text_inner" >
+                            <h6><a href="/competitions/tso" style="font-family: Lato;font-weight: bold; color: white!important;">Explore</a></h6>
+                            <a ><h5 style="padding: 0px; font-family: Lato">Techfest Olympiad</h5></a>
+                            <p style="padding: 0px; font-family: Lato">PRIZES WORTH INR 25,000/- </p>
+                            <!--                                    <a href="#">Feb 11,ac 2017 <span>/</span></a>-->
+                            <!--                                    <a href="#">No Comments</a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/inspire.png" style="background-size: cover;width: 100%" alt="">
@@ -740,7 +605,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/makerthon.png" style="background-size: cover;width: 100%" alt="">
@@ -760,7 +625,7 @@
                 </div>
             </div>
             {{--            fintech--}}
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/images/gopynq.jpg" style="background-size: cover;width: 100%" alt="">
@@ -779,7 +644,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/images/boeing.jpg" style="background-size: cover;width: 100%" alt="">
@@ -798,7 +663,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/oppo_fintech.png" style="background-size: cover;width: 100%" alt="">
@@ -818,7 +683,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/drone.png" style="background-size: cover;width: 100%" alt="">
@@ -838,7 +703,7 @@
                 </div>
             </div>
             {{--            crane--}}
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/craneomania.png" style="background-size: cover;width: 100%" alt="">
@@ -859,7 +724,7 @@
                 </div>
             </div>
             {{--            bugbounty--}}
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/bugbounty.jpg" style="background-size: cover;width: 100%" alt="">
@@ -879,7 +744,7 @@
                 </div>
             </div>
 {{--            indiachallenge--}}
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/images/indiachallenge.png" style="background-size: cover;width: 100%" alt="">
@@ -901,7 +766,7 @@
             {{--            robovr--}}
 
             {{--            rowboatics--}}
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/rowboatics.jpg" style="background-size: cover;width: 100%" alt="">
@@ -922,7 +787,7 @@
             </div>
 
 
-            <div class="col-xs-3 col-md-3" style="z-index: 1" >
+            <div class="col-xs-3 col-md-3" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/robovr.jpg" style="background-size: cover;width: 100%" alt="">
@@ -947,14 +812,9 @@
 
 <section class="recent_bloger_area" id="ideate-section" style="padding-top: 0px;background: transparent;">
     <div class="container" style="z-index: 2">
-        <div class="col-xs-8 col-sm-5">
-            <div>
-                <h2 style="position: absolute; margin-left: -15px;margin-top: 15px; font-weight: bold; color:black ">Ideate</h2>
-                <img class="arrow4" src="/2019/Heading.svg" alt="" >
-            </div>
-        </div>
+        
         <div class="row">
-            <div class="col-xs-3 col-md-4" style="z-index: 1" >
+            <div class="col-xs-3 col-md-4" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/images/earth.jpg" style="background-size: cover;width: 100%" alt="">
@@ -973,7 +833,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3 col-md-4" style="z-index: 1" >
+            <div class="col-xs-3 col-md-4" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/images/bulb.jpg" style="background-size: cover;width: 100%"  alt="">
@@ -992,7 +852,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-3 col-md-4" style="z-index: 1" >
+            <div class="col-xs-3 col-md-4" style="z-index: 0" >
                 <div class="recent_blog_item" style="margin-bottom: 0px">
                     <div class="blog_img shadow">
                         <img src="/2019/compi/images/metamorphosis2.jpg" style="background-size: cover;width: 100%" alt="">
@@ -1016,14 +876,6 @@
     </div>
 </section>
 
-
-<div class="col-xs-8 col-sm-5" style="z-index: 2;">
-    <div style="z-index: 2;">
-        <h2 style="position: absolute; margin-top: 15px;margin-left: -17px; z-index: 2; font-weight: bold;padding-left: 23%;color: black">Past Statistics</h2>
-        <img style="z-index: 2;" class="arrow3" src="/2019/Heading.svg" alt="" >
-
-    </div>
-</div>
 <section class="ftco-counter" id="section-counter" style="z-index: 2">
     <div class="container-fluid px-0" style="z-index: 2">
 
@@ -1077,24 +929,6 @@
     </div>
 </section>
 
-
-<section class="recent_bloger_area mobile_logo" id="ideate-section" style="padding-top: 0px;background: transparent;">
-    <div class="container" style="z-index: 2">
-        <div class="col-xs-8 col-sm-5">
-            <div>
-                <h2 style="position: absolute; margin-left: -15px;margin-top: 15px; font-weight: bold; color:black ">Sponsor</h2>
-                <img class="arrow4" src="/2019/Heading.svg" alt="" >
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md" style="z-index: 1; text-align: center;" >
-                <img src="/2019/summit/images/sbi.png" alt="" style="max-height: 200px" >
-            </div>
-
-        </div>
-
-    </div>
-</section>
 
 
 
@@ -1158,7 +992,7 @@
 <script src="/2019/compi/js/jquery.min.js"></script>
 <script src="/2019/compi/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/2019/compi/js/popper.min.js"></script>
-<script src="/2019/compi/js/bootstrap.min.js"></script>
+{{--<script src="/2019/compi/js/bootstrap.min.js"></script>--}}
 <script src="/2019/compi/js/jquery.easing.1.3.js"></script>
 <script src="/2019/compi/js/jquery.waypoints.min.js"></script>
 <script src="/2019/compi/js/jquery.stellar.min.js"></script>

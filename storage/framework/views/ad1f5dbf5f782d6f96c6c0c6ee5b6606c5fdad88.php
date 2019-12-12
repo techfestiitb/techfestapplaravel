@@ -72,10 +72,10 @@
                 <div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
                     <img src="http://techfest.org/2019/initiatives/financial_literacy/iunderstand.png" alt="IMG-OUR">
                 </div>
-                <a href="http://techfest.org/initiatives/financial_literacy" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10 t-center" target="_blank" style="margin:auto">
-                    Visit Website
-                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                </a>
+
+
+
+
             </div>
         </div>
     </div>
@@ -103,10 +103,10 @@
                             <img src="http://techfest.org/2019/initiatives/pato/images2/BOLT.png" alt="IMG-OUR">
                         </div>
                     </div>
-                    <a href="http://techfest.org/initiatives/bone_health" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10" target="_blank" style="margin:auto">
-                        Visit Website
-                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                    </a>
+
+
+
+
                 </div>
             </div>
 

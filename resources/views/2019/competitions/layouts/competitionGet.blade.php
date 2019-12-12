@@ -1,31 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{!! $competition_info->name !!} | Techfest, IIT Bombay</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="/2019/ca/images/favicon_logo.png" />
-
-    <meta name="viewport" content= "width=device-width, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="/2019/compi/cozmo/css/animate.css">
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="/2019/compi/cozmo/css/icomoon.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="/2019/compi/cozmo/css/bootstrap.css">
+{{--    <link rel="stylesheet" href="/2019/compi/cozmo/css/bootstrap.css">--}}
     <!-- Flexslider  -->
     <link rel="stylesheet" href="/2019/compi/cozmo/css/flexslider.css">
     <!-- Theme style  -->
     <link rel="stylesheet" href="/2019/compi/cozmo/css/style.css">
 
     {{--    <!-- Modernizr JS -->--}}
-    <script src="/2019/compi/cozmo/js/modernizr-2.6.2.min.js"></script>
+{{--    <script src="/2019/compi/cozmo/js/modernizr-2.6.2.min.js"></script>--}}
     {{--    <!-- FOR IE9 below -->--}}
 <!--[if lt IE 9]>-->
-    <script src="/2019/compi/cozmo/js/respond.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+{{--    <script src="/2019/compi/cozmo/js/respond.min.js"></script>--}}
     {{--    <![endif]-->--}}
     <style>
         #toast {
@@ -181,7 +177,9 @@
 
         /*}*/
 
-
+        h3  {
+            color: white;
+        }
 
     </style>
     <style>
@@ -336,18 +334,17 @@
 </head>
 
 <body>
-
-{{--<img class="bg_1" src="/2019/compi/images/web_backgrounds_1.png"  alt="">--}}
-<img class="mandala1" src="/2019/homepage/images/b_mandala.png" >
+@include('2019.header.header')
 <?php
         $competition_info_link = $competition_info->link;
         $competition_info_team = $competition_info_link."_team";
         $competition_info_team_id = $competition_info_link."_team_id";
 ?>
-<div id="colorlib-page"  >
+<div id="colorlib-page">
     @include('2019.competitions.layouts.left_panel')
+    @include('2019.competitions.layouts.all_competitions')
+
     <div id="colorlib-main">
-        @include('2019.competitions.layouts.all_competitions')
         <div class="colorlib-about" style="margin-top: -20px;padding-top: 0px;">
             <div class="container-fluid">
                 <div class="row ">
@@ -475,27 +472,10 @@
     </div>
 </div>
 
-{{--<form action="" method="post" id="h-form" class="">--}}
-{{--    {{csrf_field()}}--}}
-{{--    <input type="hidden" name ="code" id="name2" style="background-color: blue">--}}
-{{--</form>--}}
-
 <!-- jQuery -->
-<script src="/2019/compi/cozmo/js/jquery.min.js"></script>
-<!-- jQuery Easing -->
-<script src="/2019/compi/cozmo/js/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="/2019/compi/cozmo/js/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="/2019/compi/cozmo/js/jquery.waypoints.min.js"></script>
-<!-- Flexslider -->
-<script src="/2019/compi/cozmo/js/jquery.flexslider-min.js"></script>
-<!-- Sticky Kit -->
-<script src="/2019/compi/cozmo/js/sticky-kit.min.js"></script>
-
-
-<!-- MAIN JS -->
-<script src="/2019/compi/cozmo/js/main.js"></script>
+{{--<script src="/2019/compi/cozmo/js/jquery.min.js"></script>--}}
+{{--<script src="/2019/compi/cozmo/js/jquery.waypoints.min.js"></script>--}}
+{{--<script src="/2019/compi/cozmo/js/main.js"></script>--}}
 
 <script>
     function launch_toast() {
@@ -506,39 +486,49 @@
 </script>
 <script>
     function myFunction1() {
-        document.getElementById("text_change").innerHTML = "<br>{!! $competition_info->structure !!}<br><br>";
+        document.getElementById("text_change").innerHTML = "<br><h3>Structure</h3>  {!! $competition_info->structure !!}<br><br>";
         document.body.click("body");
-    }
+        window.scrollBy(00, 200);
+        }
 </script>
 
 <script>
     function myFunction2() {
-        document.getElementById("text_change").innerHTML = "<br>{!! $competition_info->faqs !!}<br><br>";
+        document.getElementById("text_change").innerHTML = "<br><h3>FAQs</h3> {!! $competition_info->faqs !!}<br><br>";
         document.body.click("body");
+        window.scrollBy(00, 200);
+
     }
 </script>
 <script>
     function myFunction3() {
-        document.getElementById("text_change").innerHTML = " <br>{!! $competition_info->timeline !!}<br><br>";
+        document.getElementById("text_change").innerHTML = " <br> <h3>Timeline</h3>{!! $competition_info->timeline !!}<br><br>";
         document.body.click("body");
+        window.scrollBy(00, 200);
     }
 </script>
 <script>
     function myFunction4() {
-        document.getElementById("text_change").innerHTML = " <br>{!! $competition_info->resources !!}<br><br>";
+        document.getElementById("text_change").innerHTML = " <br><h3>Resources</h3>{!! $competition_info->resources !!}<br><br>";
         document.body.click("body");
+        window.scrollBy(00, 200);
+
     }
 </script>
 <script>
     function myFunction5() {
-        document.getElementById("text_change").innerHTML = "<br>{!! $competition_info->contact_us !!}<br><br> ";
+        document.getElementById("text_change").innerHTML = "<br> <h3>Contact Us</h3>{!! $competition_info->contact_us !!}<br><br> ";
         document.body.click("body");
+        window.scrollBy(00, 200);
+
     }
 </script>
 <script>
     function myFunction6() {
-        document.getElementById("text_change").innerHTML = "<br>{!! $competition_info->rules !!}<br><br> ";
+        document.getElementById("text_change").innerHTML = "<br> <h3>Rules</h3>{!! $competition_info->rules !!}<br><br> ";
         document.body.click("body");
+        window.scrollBy(00, 200);
+
     }
 </script>
 </body>

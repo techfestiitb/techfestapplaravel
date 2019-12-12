@@ -15,6 +15,10 @@ use Redirect;
 
 class MainController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth','verified']);
+    }
     public function competition_name_Get($competition_name){
         $competition_info = DB::table('competitions')->where(['link'=>$competition_name])->first();
         if(!empty($competition_info)){
@@ -177,13 +181,8 @@ Regards.";
 
     //2019 controllers for links
     public function competitions(){
-        if(!Auth::user()){
-            return redirect('/login');
-        }
-        if(Auth::user()){
-            $user_row = DB::table('tf_reg')->where(['email' => Auth::user()->email])->first();// return the first row containing the user(session wala user)
-            return view("2019.competitions.competitions")->with(['user_row' => $user_row]);
-        }
+        $user_row = DB::table('tf_reg')->where(['email' => Auth::user()->email])->first();// return the first row containing the user(session wala user)
+        return view("2019.competitions.competitions")->with(['user_row' => $user_row]);
     }
 
     public function summit(Request $data){

@@ -17,9 +17,10 @@
             max-height: 33.33vw;
         }
         .dp_form{
-            bottom: 0px;
             position: absolute;
-            right: 0;
+            transform: translateX(-50%) translateY(-50%);
+            left: 81%;
+            top: 81%;
         }
 
     </style>
@@ -102,15 +103,16 @@
             }
             ?>
 
-            <div style="background-image: url('{!! $image !!}');background-size: cover;background-position: center;border-radius: 25vw;height: 25vw;width: 25vw;margin: auto">
+                <label for="file_dp">
+                <div style="background-image: url('{!! $image !!}');background-size: cover;background-position: center;border-radius: 25vw;height: 25vw;width: 25vw;margin: auto;    border: 2px solid #428BFF;">
                 <form class="dp_form" id="dp_form" enctype="multipart/form-data" action="{{ route('dp_image_upload') }}"  method="post">
                     {{csrf_field()}}
-                    <label for="file_dp">
-                        <img src="/2019/profile/svg/pen-solid.svg" alt="" style="width: 25px; height: 25px;border: 1px solid red; border-radius: 10%;padding: 10%">
-                    </label>
+                        <img src="/2019/profile/plus.svg" alt="" style="width: 25px; height: 25px;">
                     <input id="file_dp" name="file" type="file" multiple accept="*image*" style="width:0px;height: 0px" />
                 </form>
             </div>
+                </label>
+
         </div>
         <hr>
         <div class="col-8">
@@ -121,7 +123,7 @@
             <p style="font-size: 1em;margin: 0px">${{ $user_row->xps }}</p>
 
             <div class="popup" style="position: absolute; right: 0px; top: 10px">
-                <img style="max-width: 100px;" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->color(0,0,0)->merge('http://beta.techfest.org/2019/profile/tf_logo_qr.png', 0.15, true)->size(1000)->generate("$user_row->name,$user_row->email,TF$user_row->id,$user_row->phone")) !!} ">
+                <img style="max-width: 50px;" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->color(0,0,0)->merge('http://beta.techfest.org/2019/profile/tf_logo_qr.png', 0.15, true)->size(1000)->generate("$user_row->name,$user_row->email,TF$user_row->id,$user_row->phone")) !!} ">
 {{--                {!! QrCode::size(100)->generate(" $user_row->name, $user_row->email, TF$user_row->id"); !!}--}}
             </div>
         </div>
@@ -134,7 +136,6 @@
 {{--            </div>--}}
 {{--        </a>--}}
 {{--    </div>--}}
-    <br>
     <hr style="margin: 0% 2%">
 </div>
 <div class="row popup">
@@ -145,6 +146,9 @@
         </div>
     @endforeach
 </div>
+@include('app.newsfeed')
+
+
 
 <div class="show2">
     <div class="overlay"></div>

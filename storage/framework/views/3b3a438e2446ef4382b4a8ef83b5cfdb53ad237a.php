@@ -122,7 +122,7 @@
             <p style="font-size: 1em;margin: 0px">$<?php echo e($user_row->xps); ?></p>
 
             <div class="popup" style="position: absolute; right: 0px; top: 10px">
-                <img style="max-width: 100px;" src="data:image/png;base64, <?php echo base64_encode(QrCode::format('png')->color(0,0,0)->merge('http://beta.techfest.org/2019/profile/tf_logo_qr.png', 0.15, true)->size(1000)->generate("$user_row->name,$user_row->email,TF$user_row->id,$user_row->phone")); ?> ">
+                <img style="max-width: 50px;" src="data:image/png;base64, <?php echo base64_encode(QrCode::format('png')->color(0,0,0)->merge('http://beta.techfest.org/2019/profile/tf_logo_qr.png', 0.15, true)->size(1000)->generate("$user_row->name,$user_row->email,TF$user_row->id,$user_row->phone")); ?> ">
 
             </div>
         </div>

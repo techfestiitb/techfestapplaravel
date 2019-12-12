@@ -1,3 +1,4 @@
+
 <div class="dropdown " style="float:right;">
     <button class=" btn btn-primary btn-learn " style="margin-top: 4px;">All Competitions</button>
     <div class="dropdown-content">
@@ -22,4 +23,5 @@
         <a href="/competitions/wpc">World Programming Championship</a>
 
     </div>
-</div><?php /**PATH /var/app/current/blog/resources/views/2019/competitions/layouts/all_competitions.blade.php ENDPATH**/ ?>
+</div>
+<?php /**PATH /var/app/current/blog/resources/views/2019/competitions/layouts/all_competitions.blade.php ENDPATH**/ ?>

@@ -17,8 +17,12 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/schedule', 'ScheduleController@schedule')->name('schedule');
 Route::get('/blog', 'BlogController@blog')->name('blog');
+Route::get('/schedule', 'ScheduleController@schedule')->name('schedule');
+
+Route::get('/welcome', 'WelcomeController@welcome')->name('welcome');
+
+
 
 Route::get('/newsfeed', 'NewsfeedController@newsfeed')->name('newsfeed');
 Route::get('/newsfeed/insert', function () {return view('2019.newsfeed.news_insert');});
@@ -38,7 +42,8 @@ Route::get('/robowars/betting/bet', 'robowarsController@view_bet');
 Route::get('/media', function () {return view('2019.media.media');})->name('media');
 Route::get('/twmun', function () {return view('2019.twmun.twmun');})->name('twmun');
 Route::get('/contact-us', function () {return view('2019.contact_us.contact_us');})->name('contact_us');
-Route::get('/summit', function () {return view('2019.summit.summit');})->name('summit');
+Route::get('/summit', 'WebpagesController@summit')->name('summit');
+Route::get('/summit/industrysummit', 'WebpagesController@industrysummit')->name('industrysummit');
 Route::get('/initiatives', function () {return view('2019.initiatives.initiatives');})->name('initiatives');
 Route::get('/initiatives/aiflt', function () {return view('2019.initiatives.aiflt');})->name('aiflt');
 Route::get('/initiatives/bolt', function () {return view('2019.initiatives.bolt');})->name('bolt');
@@ -46,14 +51,24 @@ Route::get('/lectures', 'WebpagesController@lectures')->name('lectures');
 Route::get('/exhibitions', 'WebpagesController@exhibitions')->name('exhibitions');
 Route::redirect('/esports', 'http://techfest.org/gamersleague')->name('esports');
 Route::redirect('/ift', 'http://techfest.org/ift')->name('ift');
-Route::redirect('/robowars', 'http://techfest.org/robowars')->name('robowars');
 
 Route::get('/competitions', 'MainController@competitions')->name('competitions');
 
 
+Route::get('/ift', 'WebpagesController@ift')->name('ift');
+Route::get('/robowars', 'WebpagesController@robowars')->name('robowars');
+Route::get('/ozone', 'WebpagesController@ozone')->name('ozone');
 
 
+Route::get('/workshops', 'WorkshopController@Get')->name('workshops');
 
+Route::get('/workshops/{workshop}', 'WorkshopController@get_workshop');
+
+//Route::post('/workshops_reg/{workshop}', 'WorkshopController@register_workshop');
+//Route::get('/workshops_reg/{workshop}', 'WorkshopController@reg_workshop');
+
+//Route::post('/workshops_signin/{workshop}', 'WorkshopController@reg_workshop');
+//Route::get('/workshops_/logout', 'WorkshopController@workshop_logout');
 
 
 

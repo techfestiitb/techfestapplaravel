@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta property="og:image" content="http://techfest.org/2019/robowars/robowars_thubmnail.png" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="/2019/ca/images/favicon_logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="http://techfest.org/2019/ca/images/favicon_logo.png" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81222017-1"></script>
     <script>
@@ -18,40 +18,40 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <link rel="stylesheet" href="/2019/robowars/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="/2019/robowars/css/animate.css">
-    <link rel="stylesheet" href="/2019/robowars/css3/resources.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css/animate.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css3/resources.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/2019/robowars/engine1/style.css" />
-    <script type="text/javascript" src="/2019/robowars/engine1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://techfest.org/2019/robowars/engine1/style.css" />
+    <script type="text/javascript" src="http://techfest.org/2019/robowars/engine1/jquery.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/2019/robowars/css3/style.css" />
-    <link rel="stylesheet" type="text/css" href="/2019/robowars/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="http://techfest.org/2019/robowars/css3/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://techfest.org/2019/robowars/css/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/2019/compi/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="/2019/compi/css/animate.css">
-    <link rel="stylesheet" href="/2019/compi/css/owl.carousel.min.css">
-    <!--		<link rel="stylesheet" href="/2019/compi/css/owl.theme.default.min.css">-->
-    <link rel="stylesheet" href="/2019/compi/css/magnific-popup.css">
-    <link rel="stylesheet" href="/2019/compi/css/aos.css">
-    <link rel="stylesheet" href="/2019/compi/css/ionicons.min.css">
-    <link rel="stylesheet" href="/2019/compi/css/flaticon.css">
-    <link rel="stylesheet" href="/2019/compi/css/icomoon.css">
-    <link rel="stylesheet" href="/2019/compi/css/style.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/animate.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/owl.carousel.min.css">
+    <!--		<link rel="stylesheet" href="http://techfest.org/2019/compi/css/owl.theme.default.min.css">-->
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/magnific-popup.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/aos.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/flaticon.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/icomoon.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/compi/css/style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <!--    	<link rel="stylesheet" href="css/owl.carousel.min.css">-->
     <!--    	<link rel="stylesheet" href="css/owl.theme.default.min.css">-->
-    <link rel="stylesheet" href="/2019/robowars/css/magnific-popup.css">
-    <link rel="stylesheet" href="/2019/robowars/css/aos.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css/magnific-popup.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css/aos.css">
     <!--		<link rel="stylesheet" href="css/footer_with_3_col.css">-->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/2019/robowars/css/ionicons.min.css">
-    <link rel="stylesheet" href="/2019/robowars/css/flaticon.css">
-    <link rel="stylesheet" href="/2019/robowars/css/icomoon.css">
-    <link rel="stylesheet" type="text/css" href="/2019/robowars/css3/style.css" />
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css/flaticon.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/css/icomoon.css">
+    <link rel="stylesheet" type="text/css" href="http://techfest.org/2019/robowars/css3/style.css" />
     <!--		<link href="css2/style.css" rel="stylesheet">-->
-    <link href="/2019/robowars/css2/responsive.css" rel="stylesheet">
+    <link href="http://techfest.org/2019/robowars/css2/responsive.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0bed43db05.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -61,8 +61,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="js3/modernizr.custom.97074.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/2019/robowars/js3/jquery.hoverdir.js"></script>
-    <script type="text/javascript" src="/2019/robowars/js3/animation.js"></script>
+    <script type="text/javascript" src="http://techfest.org/2019/robowars/js3/jquery.hoverdir.js"></script>
+    <script type="text/javascript" src="http://techfest.org/2019/robowars/js3/animation.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.7.2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" >
@@ -74,11 +74,11 @@
     </script>
 
 
-    <link rel="stylesheet" href="/2019/cyclothon/css/animate.css">
-    <!--	<link rel="stylesheet" href="/2019/cyclothon/css/owl.carousel.min.css">-->
-    <link rel="stylesheet" href="/2019/cyclothon/css/ionicons.min.css">
-    <link rel="stylesheet" href="/2019/cyclothon/css/jquery.timepicker.css">
-    <link rel="stylesheet" href="/2019/robowars/cyclothon_css/style.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/cyclothon/css/animate.css">
+    <!--	<link rel="stylesheet" href="http://techfest.org/2019/cyclothon/css/owl.carousel.min.css">-->
+    <link rel="stylesheet" href="http://techfest.org/2019/cyclothon/css/ionicons.min.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/cyclothon/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="http://techfest.org/2019/robowars/cyclothon_css/style.css">
     <style>
 
         .owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
@@ -92,7 +92,7 @@
             width: 100%;
             height: 100%;
             overflow-x: hidden;
-            /*<img class="bg_1" src="/2019/compi/images/web_backgrounds_1.png" alt="">*/
+            /*<img class="bg_1" src="http://techfest.org/2019/compi/images/web_backgrounds_1.png" alt="">*/
             background-color: #275E80;
             background-image: linear-gradient(to right,#5F4A85,#70427D);
         }
@@ -272,15 +272,6 @@
 
     </style>
     <style>
-        .arrow{
-            margin-top: 3%;
-            margin-left: -5%;
-            margin-bottom: 13%;
-            height: 53px;
-        }
-        .navbar{
-            position: absolute;
-        }
         .background-blue2{
             background-color: white;
         }
@@ -483,37 +474,10 @@
     </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="max-width: 100%;" >
-<img class="mandala1" src="/2019/homepage/images/b_mandala.png" >
-<img class="mandala2" src="/2019/homepage/images/b_mandala.png" >
-<img class="mandala3" src="/2019/homepage/images/b_mandala.png" >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<?php echo $__env->make('2019.header.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 <section class="home-slider js-fullheight owl-carousel" style="background: white;pointer-events: none">
-    <div class="slider-item js-fullheight" style="background-image:url('/2019/robowars/images/15-4.jpg');">
+    <div class="slider-item js-fullheight" style="background-image:url('http://techfest.org/2019/robowars/images/15-4.jpg');">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
@@ -550,7 +514,7 @@
                             the globe battle each other for the coveted Robowars Champion Title. Witness sparks fly as metal crushes metal in the most glorious
                             battles interspersed with magnificent artist performances for non-stop entertainment. Brace yourselves to be a part of one of Asia’s
                             Largest tournament here at IIT Bombay during Techfest. <br>
-                            <a style="    background: #583804!important;" href="robowars/form" class="btn btn-primary  py-2 px-4">Register</a><br>
+
                             <strong>Last Date of registration is 17th Dec</strong>
                         </p>
 
@@ -679,7 +643,7 @@
                     <div class="flip-card " style="padding: 10px 20px;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front revealOnScroll delay-500ms" data-animation="jackInTheBox">
-                                <img src="/2019/robowars/images/sethu_vijaykumar.jpg" alt="judge" style="    width: 100%;">
+                                <img src="http://techfest.org/2019/robowars/images/sethu_vijaykumar.jpg" alt="judge" style="    width: 100%;">
                             </div>
                             <div class="flip-card-back">
 
@@ -702,7 +666,7 @@
                     <div class="flip-card" style="padding: 10px 20px;">
                         <div class="flip-card-inner">
                             <div class="flip-card-front revealOnScroll delay-500ms " data-animation="jackInTheBox">
-                                <img src="/2019/robowars/images/Faruq.png" alt="anchor" style="    width: 100%;">
+                                <img src="http://techfest.org/2019/robowars/images/Faruq.png" alt="anchor" style="    width: 100%;">
                             </div>
                             <div class="flip-card-back">
 
@@ -736,10 +700,10 @@
             <div class="row">
                 <div class="col-md-3">
                     <figure class="snip1105 yellow">
-                        <img src="/2019/robowars/images/robos/tombstone_lockjaw_sparks.jpg" alt="sample36" />
+                        <img src="http://techfest.org/2019/robowars/images/robos/tombstone_lockjaw_sparks.jpg" alt="sample36" />
                         <figcaption>
                             <div class="icons">
-                                <a href="/2019/robowars/Problem Statement - 8kgs.pdf" target="_blank"><i class="fas fa-download"></i></a>
+                                <a href="http://techfest.org/2019/robowars/Problem Statement - 8kgs.pdf" target="_blank"><i class="fas fa-download"></i></a>
                             </div>
                             <h3 style="color: white"><b>8</b>  <span> KG  v2.0</span></h3>
                         </figcaption>
@@ -747,10 +711,10 @@
                 </div>
                 <div class="col-md-3">
                     <figure class="snip1105 yellow">
-                        <img src="/2019/robowars/images/robos/tombstone_lockjaw_sparks.jpg" alt="sample36" />
+                        <img src="http://techfest.org/2019/robowars/images/robos/tombstone_lockjaw_sparks.jpg" alt="sample36" />
                         <figcaption>
                             <div class="icons">
-                                <a href="/2019/robowars/Problem Statement - 15kgs.pdf" target="_blank"><i class="fas fa-download"></i></a>
+                                <a href="http://techfest.org/2019/robowars/Problem Statement - 15kgs.pdf" target="_blank"><i class="fas fa-download"></i></a>
                             </div>
                             <h3 style="color: white"><b>15</b>  <span> KG v2.0</span></h3>
                         </figcaption>
@@ -758,10 +722,10 @@
                 </div>
                 <div class="col-md-3">
                     <figure class="snip1105 yellow">
-                        <img src="/2019/robowars/images/robos/SawBlaze2.jpg" alt="sample36" />
+                        <img src="http://techfest.org/2019/robowars/images/robos/SawBlaze2.jpg" alt="sample36" />
                         <figcaption>
                             <div class="icons">
-                                <a href="/2019/robowars/Problem Statement - 60kgs.pdf" target="_blank"><i class="fas fa-download"></i></a>
+                                <a href="http://techfest.org/2019/robowars/Problem Statement - 60kgs.pdf" target="_blank"><i class="fas fa-download"></i></a>
                             </div>
                             <h3 style="color: white"><b>60</b>  <span> KG</span></h3>
                         </figcaption>
@@ -769,10 +733,10 @@
                 </div>
                 <div class="col-md-3">
                     <figure class="snip1105 yellow">
-                        <img src="/2019/robowars/images/robos/images.jpg" alt="sample36" />
+                        <img src="http://techfest.org/2019/robowars/images/robos/images.jpg" alt="sample36" />
                         <figcaption>
                             <div class="icons">
-                                <a href="/2019/robowars/Resources.zip" target="_blank"><i class="fas fa-download"></i></a>
+                                <a href="http://techfest.org/2019/robowars/Resources.zip" target="_blank"><i class="fas fa-download"></i></a>
                             </div>
                             <h3 style="color: white"><span>Other Resources</span></h3>
                         </figcaption>
@@ -803,7 +767,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/1_Bose_Team Gaj Cyborg_India.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/1_Bose_Team Gaj Cyborg_India.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
 
@@ -825,7 +789,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/2_Swag_Tech-Nominds_India.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/2_Swag_Tech-Nominds_India.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>INDIA</h4>
@@ -845,7 +809,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/3_Asterion_Trinca Botz_Brazil.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/3_Asterion_Trinca Botz_Brazil.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>BRAZIL</h4>
@@ -865,7 +829,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/4_Taanaji_Blanka Botz_India.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/4_Taanaji_Blanka Botz_India.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>INDIA</h4>
@@ -885,7 +849,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/5_Bhagat_Team Gaj Cyborg_India.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/5_Bhagat_Team Gaj Cyborg_India.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>INDIA</h4>
@@ -905,7 +869,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/6_Raven_Team Orcus_India.png" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/6_Raven_Team Orcus_India.png" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>INDIA</h4>
@@ -925,7 +889,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/7_Defiance_Team Defiance_India.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/7_Defiance_Team Defiance_India.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>INDIA</h4>
@@ -945,7 +909,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/8_Terrorbull_Terminator_India.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/8_Terrorbull_Terminator_India.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>INDIA</h4>
@@ -965,7 +929,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/9_Touro_Rio Botz_Brazil.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/9_Touro_Rio Botz_Brazil.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>BRAZIL</h4>
@@ -985,7 +949,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/10_raven.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/10_raven.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>RUSSIA</h4>
@@ -1005,7 +969,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/11_Sardar_Knock Botz_India.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/11_Sardar_Knock Botz_India.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>INDIA</h4>
@@ -1025,7 +989,7 @@
                             <figure class="snip1399">
                                 <!--						<h5 class="bottom-left1 bottom-left colors123">ANDROID U <br>HIROSHI ISHIGURO LAB</h5>-->
 
-                                <img src="/2019/robowars/images/12_N-Mada_Haka Robotics_Mexico.jpg" alt=""/>
+                                <img src="http://techfest.org/2019/robowars/images/12_N-Mada_Haka Robotics_Mexico.jpg" alt=""/>
                                 <figcaption>
                                     <i class="ion-podium"></i>
                                     <h4>MEXICO</h4>
@@ -1057,66 +1021,66 @@
                             <div class="carousel-testimony owl-carousel ftco-owl">
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 1.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 1.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 2.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 2.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 3.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 3.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 4.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 4.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 5.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 5.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 6.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 6.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 7.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 7.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 8.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 8.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 9.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 9.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 10.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 10.jpg" alt="">
 
                                     </div>
                                 </div>
                                 <div class="item">
                                     <div class=" img">
-                                        <img src="/2019/robowars/data1/images/RW 11.jpg" alt="">
+                                        <img src="http://techfest.org/2019/robowars/data1/images/RW 11.jpg" alt="">
 
                                     </div>
                                 </div>
@@ -1360,9 +1324,9 @@
         <div class="col-md"></div>
 
         <div class="col-md" style="text-align: center;">
-            <img src="/2019/robowars/images/Altair_horizontal_sponsor.png" alt="" style="width: 90%; margin: auto;">
+            <img src="http://techfest.org/2019/robowars/images/Altair_horizontal_sponsor.png" alt="" style="width: 90%; margin: auto;">
         </div> <div class="col-md" style="text-align: center;">
-            <img src="/2019/robowars/images/rompot7899.png" alt="" style="width: 90%; margin: auto;">
+            <img src="http://techfest.org/2019/robowars/images/rompot7899.png" alt="" style="width: 90%; margin: auto;">
         </div>
         <div class="col-md"></div>
 
@@ -1461,32 +1425,32 @@
 
 
 
-<script src="/2019/cyclothon/js/jquery.min.js"></script>
-<script src="/2019/cyclothon/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="/2019/cyclothon/js/jquery.waypoints.min.js"></script>
-<script src="/2019/cyclothon/js/jquery.stellar.min.js"></script>
-<script src="/2019/cyclothon/js/owl.carousel.min.js"></script>
-<script src="/2019/cyclothon/js/aos.js"></script>
-<script src="/2019/cyclothon/js/scrollax.min.js"></script>
-<script src="/2019/cyclothon/js/main.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/jquery.min.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/jquery.waypoints.min.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/jquery.stellar.min.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/owl.carousel.min.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/aos.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/scrollax.min.js"></script>
+<script src="http://techfest.org/2019/cyclothon/js/main.js"></script>
 
 
 
-<script src="/2019/robowars/js/jquery.min.js"></script>
-<script src="/2019/robowars/js/jquery-migrate-3.0.1.min.js"></script>
-<script src="/2019/robowars/js/popper.min.js"></script>
-<script src="/2019/robowars/js/bootstrap.min.js"></script>
-<script src="/2019/robowars/js/jquery.easing.1.3.js"></script>
-<script src="/2019/robowars/js/jquery.waypoints.min.js"></script>
-<script src="/2019/robowars/js/jquery.stellar.min.js"></script>
-<script src="/2019/robowars/js/owl.carousel.min.js"></script>
-<script src="/2019/robowars/js/jquery.magnific-popup.min.js"></script>
-<script src="/2019/robowars/js/aos.js"></script>
-<script src="/2019/robowars/js/jquery.animateNumber.min.js"></script>
-<script src="/2019/robowars/js/scrollax.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/jquery.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/popper.min.js"></script>
+
+<script src="http://techfest.org/2019/robowars/js/jquery.easing.1.3.js"></script>
+<script src="http://techfest.org/2019/robowars/js/jquery.waypoints.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/jquery.stellar.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/owl.carousel.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/jquery.magnific-popup.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/aos.js"></script>
+<script src="http://techfest.org/2019/robowars/js/jquery.animateNumber.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js/scrollax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="/2019/robowars/js/google-map.js"></script>
-<script src="/2019/robowars/js/main.js"></script>
+<script src="http://techfest.org/2019/robowars/js/google-map.js"></script>
+<script src="http://techfest.org/2019/robowars/js/main.js"></script>
 
 
 
@@ -1494,19 +1458,19 @@
 
 
 <!-- Jquery-2.2.4 JS -->
-<script src="/2019/robowars/js2/jquery-2.2.4.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js2/jquery-2.2.4.min.js"></script>
 <!-- Popper js -->
-<script src="/2019/robowars/js2/popper.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js2/popper.min.js"></script>
 <!-- Bootstrap-4 Beta JS -->
 <!--	<script src="js2/bootstrap.min.js"></script>-->
 <!-- All Plugins JS -->
-<script src="/2019/robowars/js2/plugins.js"></script>
+<script src="http://techfest.org/2019/robowars/js2/plugins.js"></script>
 <!-- Slick Slider Js-->
-<script src="/2019/robowars/js2/slick.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js2/slick.min.js"></script>
 <!-- Footer Reveal JS -->
-<script src="/2019/robowars/js2/footer-reveal.min.js"></script>
+<script src="http://techfest.org/2019/robowars/js2/footer-reveal.min.js"></script>
 <!-- Active JS -->
-<script src="/2019/robowars/js2/active.js"></script>
+<script src="http://techfest.org/2019/robowars/js2/active.js"></script>
 
 
 

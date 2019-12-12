@@ -77,7 +77,7 @@
                 </div>
 
             </div>
-            <a href="/industrysummit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10 t-center" target="_blank" style="margin:auto">
+            <a href="/summit/industrysummit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10 t-center" target="_blank" style="margin:auto">
                 Visit Website
                 <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
             </a>
@@ -103,7 +103,7 @@
                             <img src="http://techfest.org/2019/summit/images/8306.jpeg" alt="IMG-OUR">
                         </div>
                     </div>
-                    <a href="/mediasummit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10" target="_blank" style="margin:auto">
+                    <a href="/summit/mediasummit" class="btn3 flex-c-m size18 txt11 trans-0-4 m-10" target="_blank" style="margin:auto">
                         Visit Website
                         <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                     </a>

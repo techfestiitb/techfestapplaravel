@@ -26,8 +26,9 @@
 <body>
 @include('layouts.preloader')
 @include('2019.header.header')
+@include('2019.lectures.slideshow')
 <div>
-    @foreach($lectures_row as $lectures_row)
+@foreach($lectures_row as $lectures_row)
         <div style="padding-top: 0.5em;">
                 <div class="row" style="display: flex;padding: 0% 5%;height: 25vw;">
                     <div class="col-8" style="    overflow: scroll;height: 100%;">

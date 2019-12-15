@@ -470,9 +470,6 @@
     </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="max-width: 100%;" >
-
-
-
 @include('2019.header.header')
 <section class="home-slider js-fullheight owl-carousel" style="background: white;pointer-events: none">
     <div class="slider-item js-fullheight" style="background-image:url('http://techfest.org/2019/ift/gallery/Screenshot_1.jpg');">

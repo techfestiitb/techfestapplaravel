@@ -26,8 +26,9 @@
 <body>
 <?php echo $__env->make('layouts.preloader', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php echo $__env->make('2019.header.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php echo $__env->make('2019.lectures.slideshow', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <div>
-    <?php $__currentLoopData = $lectures_row; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lectures_row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+<?php $__currentLoopData = $lectures_row; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lectures_row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div style="padding-top: 0.5em;">
                 <div class="row" style="display: flex;padding: 0% 5%;height: 25vw;">
                     <div class="col-8" style="    overflow: scroll;height: 100%;">

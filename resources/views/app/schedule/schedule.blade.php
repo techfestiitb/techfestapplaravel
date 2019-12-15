@@ -40,7 +40,6 @@
             height: 100%;
         }
         body h1 {
-            text-align: center;
             color: #428BFF;
             font-weight: 300;
             margin: 0;
@@ -52,7 +51,7 @@
             transform: translateX(-50%);
             position: relative;
             background: white;
-            padding: 50px;
+            padding: 50px 20px 50px 20px;
             padding-bottom: 80px;
             width: 97%;
             /*height: 250px;*/
@@ -159,7 +158,7 @@
             content: "";
             position: relative;
             display: block;
-            width: 30px;
+            width: 140px;
             height: 3px;
             background: #428BFF;
             margin-top: 5px;
@@ -296,9 +295,90 @@
         }
 
     </style>
+
+
+
+    <!-- Styles -->
+    <style>
+        html, body {
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            /*align-items: center;*/
+            display: flex;
+            /*justify-content: center;*/
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+
+        .content {
+            /*text-align: center;*/
+        }
+
+        .title {
+            font-size: 84px;
+        }
+
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .m-b-md {
+            margin-bottom: 30px;
+        }
+        .
+
+    </style>
+    <style>
+
+        .crossRotate{
+            transform: rotate(0deg);
+            transition: transform 0.4s ease;
+        }
+
+        .crossRotate.open{
+            transform: rotate(180deg);
+            transition: transform 0.4s ease;
+        }
+        .btn.focus, .btn:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,0);
+            outline: 0px auto -webkit-focus-ring-color;
+
+        }
+        .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
+    </style>
+
 </head>
-<body>
+<body style="width: 100%;margin: 0px;overflow-x: hidden;">
 @include('2019.header.header')
+
 <div>
     <h1 style="text-align: center;">Schedule</h1>
 </div>
@@ -329,22 +409,31 @@
         <div class="slider"><div class="indicator"></div></div>
         <div class="content">
             <section>
-{{--                <h2>Contents1</h2>--}}
-                <p>Coming Soon</p>
+                <h2>Day 1 Schedule</h2>
+                @foreach($shcedule_day1 as $i)
+                    @include('app.schedule.schedule_sections')
+                @endforeach
 
             </section>
             <section>
-{{--                <h2>Contents2</h2>--}}
-                <p>Coming Soon</p>
+                <h2>Day 2 Schedule</h2>
+                @foreach($shcedule_day2 as $i)
+                    @include('app.schedule.schedule_sections')
+                @endforeach
             </section>
             <section>
-{{--                <h2>Contents3</h2>--}}
-                <p>Coming Soon</p>
+                <h2>Day 3 Schedule</h2>
+                @foreach($shcedule_day3 as $i)
+                    @include('app.schedule.schedule_sections')
+                @endforeach
             </section>
 
         </div>
     </div>
 
 </div>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
 </body>
 </html>

@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use random;
 
 class WebpagesController extends Controller
 {
     //
     public function lectures(){
         $lectures_row = DB::table('lectures')->get();
-        return view('2019.lectures.lectures')->with(['lectures_row'=>$lectures_row]);
+        $random_lectures = DB::table('lectures')->get()->random(7);
+        return view('2019.lectures.lectures')->with(['lectures_row'=>$lectures_row,'random_lectures'=>$random_lectures]);
     }
     public function exhibitions(){
         $exhibitions_row = DB::table('exhibitions')->get();

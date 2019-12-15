@@ -26,21 +26,27 @@
                         {{ __('Bose') }}
                     </button>
                 </div>
-                <p id="demo" style="color: black" size="larger"></p>
+                <p id="demo" style="color: deeppink" size="larger"></p>
             </div>
 
                         <script>
                             function bet() {
                                 var txt;
-                                var amount = prompt("Please enter the amount you want to bet:", "xxxx XPS");
-                                if (amount == null || amount == "") {
+                                var amount = prompt("Please enter the amount of XPS you want to bet:\n (You have " + {{ $user_row->xps }} +" remaining)", " ");
+                                if (amount == null || amount == " ") {
                                     txt = "Enter Valid Amount";
                                 }
-                                if (amount > 0.9* 5555 ) {
+                                else if (amount > 0.9* {{ $user_row->xps }} && amount < {{ $user_row->xps }}  ) {
                                     txt = "Sorry but you can't spend more than 90% of your XPS ";
                                 }
-                                else {
-                                    txt = "Hey " + "dee" + "! You are playing for " + amount + "XPS";
+                                else if (amount < 0.9* {{ $user_row->xps }} ) {
+                                    txt = "Hey " + "{{$user_row->name}}" + "! You are playing for " + amount + "XPS";
+                                }
+                                {{--if (amount > {{ $user_row->xps }}){--}}
+                                {{--    txt = "Sorry! " + {{$user_row->name}} + " , Your balance is less than your betting amount.";--}}
+                                {{--}--}}
+                                else{
+                                    txt = "Reload your page!";
                                 }
                                 document.getElementById("demo").innerHTML = txt;
                             }

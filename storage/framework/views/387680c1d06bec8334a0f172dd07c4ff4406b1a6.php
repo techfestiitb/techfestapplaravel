@@ -406,7 +406,7 @@
         }
     </style>
 </head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" style="width: 100vw">
 
 
 <a class="motion_bounce" href="#techno-section"><div  class="arrow bounce"></div></a>
@@ -934,7 +934,6 @@
 
 
 <!-- loader -->
-<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -1005,12 +1004,5 @@
 <script src="/2019/compi/js/google-map.js"></script>
 
 <script src="/2019/compi/js/main.js"></script>
-
-
-
-
-
-
-
 </body>
 </html><?php /**PATH /var/app/current/blog/resources/views/2019/competitions/competitions.blade.php ENDPATH**/ ?>

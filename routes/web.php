@@ -18,6 +18,8 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog', 'BlogController@blog')->name('blog');
+Route::get('/admin/blog', 'BlogController@blog_approve_get')->name('admin_blog');
+Route::post('/admin/blog_approve', 'BlogController@blog_approve');
 Route::get('/schedule', 'ScheduleController@schedule')->name('schedule');
 
 Route::get('/welcome', 'WelcomeController@welcome')->name('welcome');
@@ -50,7 +52,6 @@ Route::get('/initiatives/bolt', function () {return view('2019.initiatives.bolt'
 Route::get('/lectures', 'WebpagesController@lectures')->name('lectures');
 Route::get('/exhibitions', 'WebpagesController@exhibitions')->name('exhibitions');
 Route::redirect('/esports', 'http://techfest.org/gamersleague')->name('esports');
-Route::redirect('/ift', 'http://techfest.org/ift')->name('ift');
 
 Route::get('/competitions', 'MainController@competitions')->name('competitions');
 

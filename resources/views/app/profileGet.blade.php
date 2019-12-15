@@ -120,7 +120,7 @@
             <p style="font-size: 1em;margin: 0px;">{!! $user_row->email !!}</p>
             <p style="font-size: 1em;margin: 0px">TF{!! $user_row->id !!}</p>
             <p style="font-size: 1em;margin: 0px">{!! $user_row->phone !!}</p>
-            <p style="font-size: 1em;margin: 0px">${{ $user_row->xps }}</p>
+            <p style="font-size: 1em;margin: 0px">XPS-{{ $user_row->xps }}</p>
 
             <div class="popup" style="position: absolute; right: 0px; top: 10px">
                 <img style="max-width: 50px;" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->color(0,0,0)->merge('http://beta.techfest.org/2019/profile/tf_logo_qr.png', 0.15, true)->size(1000)->generate("$user_row->name,$user_row->email,TF$user_row->id,$user_row->phone")) !!} ">

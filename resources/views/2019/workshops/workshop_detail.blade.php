@@ -160,6 +160,9 @@
         .row{
             width: 100%;margin-right: 0px; margin-left: 0px;
         }
+        .btn{
+            padding: 12px 20px;
+        }
     </style>
 
 </head>
@@ -196,7 +199,7 @@
                                     ?>
                                         @if(!empty($team_members))
                                             @if(!empty($team_members[0]))
-                                                <br>You are already registered
+{{--                                                <br>You are already registered--}}
                                                 <br>Team ID-{{$workshops_info->coeff}}{{$team_members[0]->id}}
                                                 @if(!empty($payment_row->ticketId))
                                                     <br>Payment Done
@@ -205,7 +208,7 @@
                                                 @if(empty($payment_row->ticketId))
                                                     {{$payment_row}}
                                                     <br>Payment Not Done Yet
-                                                    <button><a href="{{$workshops_info->payment_link}}">Pay Now</a></button>
+{{--                                                    <button><a href="{{$workshops_info->payment_link}}">Pay Now</a></button>--}}
                                                 @endif
                                             @endif
                                             @foreach($team_members as $member)
@@ -222,18 +225,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="wizard-navigation">
-                        <ul>
+                    <div class="wizard-navigation" style="text-align: center;">
                             @if(!empty($workshops_info->about))
-                                <li><a href="#location" data-toggle="tab">About</a></li>
+                                <a class='btn btn-fill btn-primary btn-wd' href="#location" data-toggle="tab">About</a>
                             @endif
-                            <li><a href="#type" data-toggle="tab">Details</a></li>
-                            <li><a href="#facilities" data-toggle="tab">Rules</a></li>
-                            <li><a href="#description" data-toggle="tab">Contact Us</a></li>
-                        </ul>
+                            <a class='btn btn-fill btn-primary btn-wd' href="#type" data-toggle="tab">Details</a>
+                            <a class='btn btn-fill btn-primary btn-wd' href="#facilities" data-toggle="tab">Rules</a>
+                            <a class='btn btn-fill btn-primary btn-wd' href="#description" data-toggle="tab">Contact Us</a>
+
                     </div>
                     <div class="tab-content" style="min-height: 33vh;">
-                        <div class="tab-pane" id="location">
+                        <div class="tab-pane active" id="location">
                             <div class="row">
                                 <div class="col-sm-3">
                                     <img src="http://techfest.org{{$workshops_info->image}}" alt="" style="width: 100%; border-radius: 10px;">
@@ -296,11 +298,11 @@
                             </div>
                         </div>
                         <div class="tab-pane" id="description">
-                            <div class="row">
+                            <div class="row" style="display: block">
                                 <h4 class="info-text"> Feel Free to contact us </h4>
-                                <p class="description">{{$workshops_info->contact_us_name}}</p>
-                                <p class="description">{{$workshops_info->contact_us_email}}</p>
-                                <p class="description">{{$workshops_info->contact_us_number}}</p>
+                                <br><p class="description">{{$workshops_info->contact_us_name}}</p>
+                                <br><p class="description">{{$workshops_info->contact_us_email}}</p>
+                                <br><p class="description">{{$workshops_info->contact_us_number}}</p>
 
                             </div>
                         </div>
@@ -311,11 +313,11 @@
     </div>
 </div>
 <!--   Core JS Files   -->
-<script src="http://techfest.org/2019/workshops/assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
-<script src="http://techfest.org/2019/workshops/assets/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="http://techfest.org/2019/workshops/assets/js/jquery.bootstrap.js" type="text/javascript"></script>
-<script src="http://techfest.org/2019/workshops/assets/js/material-bootstrap-wizard.js"></script>
-<script src="http://techfest.org/2019/workshops/assets/js/jquery.validate.min.js"></script>
+{{--<script src="http://techfest.org/2019/workshops/assets/js/jquery-2.2.4.min.js" type="text/javascript"></script>--}}
+{{--<script src="http://techfest.org/2019/workshops/assets/js/bootstrap.min.js" type="text/javascript"></script>--}}
+{{--<script src="http://techfest.org/2019/workshops/assets/js/jquery.bootstrap.js" type="text/javascript"></script>--}}
+{{--<script src="/2019/workshops/validate.js"></script>--}}
+{{--<script src="http://techfest.org/2019/workshops/assets/js/jquery.validate.min.js"></script>--}}
 </body>
 <!--   Core JS Files   -->
 

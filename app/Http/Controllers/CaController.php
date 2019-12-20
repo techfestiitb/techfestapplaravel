@@ -148,7 +148,7 @@ class CaController extends Controller
             $ca_reg_data->refer = "self refer";
         }
 //        DB::table('random')->insert(['abcd' =>$ca_reg_data->address, '1234'=> $ca_reg_data->number]);
-        DB::table('ca_reg')->where(['email'=>Auth::user()->email->email])->update([
+        DB::table('ca_reg')->where(['email'=>Auth::user()->email])->update([
             'number'    =>$ca_reg_data->number,
             'college'   =>$ca_reg_data->college_name,
             'year'  =>$ca_reg_data->year,

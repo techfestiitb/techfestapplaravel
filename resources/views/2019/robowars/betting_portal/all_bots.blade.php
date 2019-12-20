@@ -380,29 +380,13 @@
 @include('2019.header.header')
 
 <div>
-    <h1 style="text-align: center;">Schedule</h1>
-    h3 <a href="https://www.google.com/maps/dir//iitb/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x3be7c7f189efc039:0x68fdcea4c5c5894e?sa=X&ved=2ahUKEwi5waaxtrrmAhWTRMAKHaOfBt4Q9RcwIHoECAcQEA">dfshsjdhf</a>
-</div>
-<div>
     <div class="tabs">
         <input type="radio" id="tab1" name="tab-control" checked>
-        <input type="radio" id="tab2" name="tab-control">
-        <input type="radio" id="tab3" name="tab-control">
 
-        <ul style="position: sticky;top: 8vh;padding-top: 5px;border: 2px solid #428BFF;background-color: white;border-radius: 7px;">
+        <ul style="position: sticky;top: 8vh;padding-top: 5px;border: 2px solid #428BFF;background-color: white;border-radius: 7px;z-index: 1;">
             <li title="Features">
                 <label for="tab1" role="button">
-                    <span>3rd Jan</span>
-                </label>
-            </li>
-            <li title="Features">
-                <label for="tab2" role="button">
-                    <span>4th Jan</span>
-                </label>
-            </li>
-            <li title="Features">
-                <label for="tab3" role="button">
-                    <span>5th Jan</span>
+                    <span>All Bots</span>
                 </label>
             </li>
         </ul>
@@ -410,29 +394,72 @@
         <div class="slider"><div class="indicator"></div></div>
         <div class="content">
             <section>
-                <h2>Day 1 Schedule</h2>
-                <h3>Coming Soon</h3>
-{{--                @foreach($shcedule_day1 as $i)--}}
-{{--                    @include('app.schedule.schedule_sections')--}}
-{{--                @endforeach--}}
+                <h2>Bot Details</h2>
+                @foreach($bot_list as $i)
+                    <div  style=" margin: 2px;">
+                        <div class="row">
+                            <div class="col-2" style="padding: 10px">
+                                <img src="{{$i->bot_image}}" width="100%" >
+                            </div>
+                            <div class="col-8" style="padding: 0%">
+                                <span style="display: flex;"><h5  style="font-weight: bold;color: black; font-size: 20px ; margin-bottom: 1px ">Bot : {!! $i->Bot_name !!}</h5>
+                                    @if($i->active_bot == "1")
+                                        <p style="color: green;    position: absolute;right: 0px;"><b>Active</b></p>
+                                    @endif
+                                </span>
+                                <p style="font-size:12px; margin: 1px ">Team Name : {!! $i->Team_name  !!} </p>
+                                <p style="font-size:12px; margin: 1px  ">Weapon : {!! $i->Weapon  !!}</p>
+
+                                <div class="row">
+                                    <div class="col-sm-2" style="display: inline-block;"> <span style="display: inline-block;"><div class="circle" style="width:10px;height:10px;border-radius:50px;font-size:20px;color:#fff;line-height:100px;background: #428BFF;"></div></span>
+                                        <p style="display: inline-block;">Bot Id- {!! $i->id !!} </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2" style="padding: 3%">
+                                <button type="button" class="btn" data-toggle="collapse" data-target="#demo{!! $i->id !!}">
+                                    <div id="container3{!! $i->id !!}">
+                                        <img id="icon{!! $i->id !!}" class="crossRotate" src="https://image.flaticon.com/icons/png/512/120/120890.png" width="70%" style="" >
+                                    </div>
+
+                                </button>
+                            </div>
+                        </div>
+                        <div id="demo{!! $i->id !!}" class="collapse" style="margin-top: 0px">
+                            <div class="row">
+                                <div class="col-2">
+
+                                </div>
+                                <div class="col-10" style=" padding-left: 0% ;padding-right: 5%">
+                                    <h2>Bot Strength</h2>
+                                    <p style="color: black">{!! $i->Strength_1 !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr style="margin: 0; width: 90%; margin-left: 5%">
+                    <script>
+                        (function(document){
+                            var div = document.getElementById('container3{!! $i->id !!}');
+                            var icon = document.getElementById('icon{!! $i->id !!}');
+                            var open = false;
+
+                            div.addEventListener('click', function(){
+                                if(open){
+                                    icon.className = 'crossRotate';
+                                } else{
+                                    icon.className = 'crossRotate open';
+                                }
+
+                                open = !open;
+                            });
+                        })(document);
+                    </script>
+                @endforeach
 
             </section>
-            <section>
-                <h2>Day 2 Schedule</h2>
-                <h3>Coming Soon</h3>
 
-                {{--                @foreach($shcedule_day2 as $i)--}}
-{{--                    @include('app.schedule.schedule_sections')--}}
-{{--                @endforeach--}}
-            </section>
-            <section>
-                <h2>Day 3 Schedule</h2>
-                <h3>Coming Soon</h3>
-
-                {{--                @foreach($shcedule_day3 as $i)--}}
-{{--                    @include('app.schedule.schedule_sections')--}}
-{{--                @endforeach--}}
-            </section>
 
         </div>
     </div>

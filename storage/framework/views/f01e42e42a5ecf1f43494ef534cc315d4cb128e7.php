@@ -141,7 +141,7 @@
         // Fakes the loading setting a timeout
         setTimeout(function() {
             $('body').addClass('loaded');
-        }, 500);
+        }, 200);
 
     });
 </script><?php /**PATH /var/app/current/blog/resources/views/layouts/preloader.blade.php ENDPATH**/ ?>

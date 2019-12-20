@@ -138,11 +138,11 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="description">
-                        <div class="row">
+                        <div class="row" style="display: block">
                             <h4 class="info-text"> Feel Free to contact us </h4>
-                            <p class="description">{{$workshops_info->contact_us_name}}</p>
-                            <p class="description">{{$workshops_info->contact_us_email}}</p>
-                            <p class="description">{{$workshops_info->contact_us_number}}</p>
+                            <br><p class="description">{{$workshops_info->contact_us_name}}</p>
+                            <br><p class="description">{{$workshops_info->contact_us_email}}</p>
+                            <br><p class="description">{{$workshops_info->contact_us_number}}</p>
                         </div>
                     </div>
                 </div>

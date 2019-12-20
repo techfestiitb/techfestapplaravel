@@ -33,4 +33,7 @@ class WebpagesController extends Controller
     public function ozone(){
         return view('2019.ozone.ozone');
     }
+    public function sponsors(){
+        return view('2019.sponsor.sponsor');
+    }
 }

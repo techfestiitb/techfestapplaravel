@@ -27,12 +27,13 @@
 <?php echo $__env->make('layouts.preloader', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <?php echo $__env->make('2019.header.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 <div>
+    <br>
     <?php $__currentLoopData = $exhibitions_row; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $exhibitions_row): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div style="padding-top: 0.5em;">
             <div class="row" style="display: flex;padding: 0% 5%;height: 25vw;">
                 <div class="col-8" style="    overflow: scroll;height: 100%;">
                     <h5 style="margin-bottom: 0;"><?php echo $exhibitions_row->name; ?></h5>
-                    <p style="font-size: 13px"><i><?php echo $exhibitions_row->country; ?></i> </p>
+                    <p style="font-size: 13px;margin-bottom: 4px;"><i><?php echo $exhibitions_row->country; ?></i> </p>
                     <p style="font-size: 11px"><?php echo $exhibitions_row->oneliner; ?></p>
                 </div>
                 <div class="col-4" style="background-image: url('http://techfest.org<?php echo $exhibitions_row->image; ?>');background-size: cover;background-position: center;border-radius: 20px">

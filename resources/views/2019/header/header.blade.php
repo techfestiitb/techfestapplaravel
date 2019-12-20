@@ -8,17 +8,10 @@
 </script>
 <style>
     .navbar-light .navbar-nav .nav-link {
-        color: rgba(0,0,0,1);
+        color: rgba(0, 0, 0, 1);
+    }
 </style>
-<div class="row" style="position: sticky;top: 0;padding: 1%;width: 100%">
-    <div id="app" style="width: 100%">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-                <div class="col-8" style="text-align: center;">
-                    <img src="http://techfest.org/2019/tf_date_black.png" alt="" style="max-height: 4vh">
-                </div>
-        </nav>
-    </div>
-</div>
+<div class="row" style="position: sticky;top: 0;padding: 3.6vh;width: 100%"></div>
 
 <div class="row" style="position: fixed;top: 0;background-color: white;z-index: 100;padding: 1%;filter: invert(1);margin-right: 0px;margin-left: 0px;width: 100%">
     <div id="app" style="width: 100%">
@@ -54,7 +47,10 @@
                             <li class="nav-item"><a class="nav-link" href="{{ route('robowars') }}">Robowars</a></li>
 {{--                            <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Technoholix</a></li>--}}
                             <li class="nav-item"><a class="nav-link" href="{{ route('ozone') }}">Ozone</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{ route('sponsors') }}">Sponsors</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('contact_us') }}">Contact Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://google.com">Google</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://techfest.org">Techfest.org</a></li>
                     </ul>
                 </div>
             </div>

@@ -32,14 +32,14 @@
                         <script>
                             function bet() {
                                 var txt;
-                                var amount = prompt("Please enter the amount of XPS you want to bet:\n (You have " + {{ $user_row->xps }} +" remaining)", " ");
+                                var amount = prompt("Please enter the amount of XPS you want to bet:\n (You have " + {!! $xps_user->xps !!} +" remaining)", " ");
                                 if (amount == null || amount == " ") {
                                     txt = "Enter Valid Amount";
                                 }
-                                else if (amount > 0.9* {{ $user_row->xps }} && amount < {{ $user_row->xps }}  ) {
+                                else if (amount > 0.9*{!! $xps_user->xps !!} && amount <{!! $xps_user->xps !!}  ) {
                                     txt = "Sorry but you can't spend more than 90% of your XPS ";
                                 }
-                                else if (amount < 0.9* {{ $user_row->xps }} ) {
+                                else if (amount < 0.9*{!! $xps_user->xps !!} ) {
                                     txt = "Hey " + "{{$user_row->name}}" + "! You are playing for " + amount + "XPS";
                                 }
                                 {{--if (amount > {{ $user_row->xps }}){--}}
@@ -52,3 +52,16 @@
                             }
                         </script>
         </div></div></div></div>
+    </div>
+    
+    <div>
+        <form action="/robowars/betting/bet/post" method="post">
+            @csrf
+            <input type="number" name="amount" max="{!! $xps_user->xps !!}" min="1">
+            <select name="bot_name">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </select>
+            <input type="submit">
+        </form>
+    </div>

@@ -18,6 +18,8 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/blog', 'BlogController@blog')->name('blog');
+Route::post('/blog/post','BlogController@post_blog')->name('blog_post');
+Route::post('/blog/update','BlogController@update_likes')->name('update_likes');
 Route::get('/admin/blog', 'BlogController@blog_approve_get')->name('admin_blog');
 Route::post('/admin/blog_approve', 'BlogController@blog_approve');
 Route::get('/schedule', 'ScheduleController@schedule')->name('schedule');
@@ -39,6 +41,11 @@ Route::post('/profile/dp_edit', 'ProfileController@dp_edit')->name('dp_image_upl
 Route::get('/robowars/betting/', 'robowarsController@view_home');
 Route::get('/robowars/betting/leaderboard', 'robowarsController@view_leaderboard');
 Route::get('/robowars/betting/bet', 'robowarsController@view_bet');
+Route::get('/robowars/betting/all_bots', 'robowarsController@all_bots');
+Route::post('/robowars/betting/set_bet', 'robowarsController@set_bet');
+Route::get('/admin/robowars/betting/', 'robowarsController@admin_get');
+Route::post('/admin/robowars/betting/bet/result', 'robowarsController@admin_result');
+Route::post('/admin/robowars/betting/status', 'robowarsController@betting_status');
 
 
 Route::get('/media', function () {return view('2019.media.media');})->name('media');
@@ -51,6 +58,7 @@ Route::get('/initiatives/aiflt', function () {return view('2019.initiatives.aifl
 Route::get('/initiatives/bolt', function () {return view('2019.initiatives.bolt');})->name('bolt');
 Route::get('/lectures', 'WebpagesController@lectures')->name('lectures');
 Route::get('/exhibitions', 'WebpagesController@exhibitions')->name('exhibitions');
+Route::get('/sponsors', 'WebpagesController@sponsors')->name('sponsors');
 Route::redirect('/esports', 'http://techfest.org/gamersleague')->name('esports');
 
 Route::get('/competitions', 'MainController@competitions')->name('competitions');

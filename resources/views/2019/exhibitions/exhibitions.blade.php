@@ -27,12 +27,13 @@
 @include('layouts.preloader')
 @include('2019.header.header')
 <div>
+    <br>
     @foreach($exhibitions_row as $exhibitions_row)
         <div style="padding-top: 0.5em;">
             <div class="row" style="display: flex;padding: 0% 5%;height: 25vw;">
                 <div class="col-8" style="    overflow: scroll;height: 100%;">
                     <h5 style="margin-bottom: 0;">{!! $exhibitions_row->name !!}</h5>
-                    <p style="font-size: 13px"><i>{!! $exhibitions_row->country !!}</i> </p>
+                    <p style="font-size: 13px;margin-bottom: 4px;"><i>{!! $exhibitions_row->country !!}</i> </p>
                     <p style="font-size: 11px">{!! $exhibitions_row->oneliner !!}</p>
                 </div>
                 <div class="col-4" style="background-image: url('http://techfest.org{!! $exhibitions_row->image !!}');background-size: cover;background-position: center;border-radius: 20px">

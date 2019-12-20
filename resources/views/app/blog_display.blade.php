@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
     <style>
@@ -26,7 +26,7 @@
         }
     </style>
 </head>
-<span>
+
 @include('layouts.preloader')
 @include('2019.header.header')
 {{--<h4>Blog will be coming soon</h4>--}}
@@ -242,7 +242,9 @@
     .third-type .container .icon-details:last-child {
         padding-top: 10px;
     }
-
+    .third-type .newpost {
+        padding: 0 16px;
+    }
     .approve-decline-request {
         width: 300px;
         margin: 0 auto;
@@ -256,8 +258,6 @@
     }
     .content{
         max-height: 40em;
-
-
     }
     .description{
         overflow:hidden;
@@ -267,46 +267,192 @@
     span #imgupload{
        height:2 em;
         width:100%;
+        float:left;
     }
-</style>
-<div >
+    .newpost .upload-details{
+        width:30px;
+        height:30px;
+    }
 
+    #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        top: 100px;
+        font-size: 17px;
+    }
+
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+
+    @-webkit-keyframes fadein {
+        from {top: 0; opacity: 0;}
+        to {top: 100px; opacity: 1;}
+    }
+
+    @keyframes fadein {
+        from {top: 0; opacity: 0;}
+        to {top: 100px; opacity: 1;}
+    }
+
+    @-webkit-keyframes fadeout {
+        from {top: 100px; opacity: 1;}
+        to {top: 0; opacity: 0;}
+    }
+
+    @keyframes fadeout {
+        from {
+            top: 100px;
+            opacity: 1;
+        }
+        to {
+            top: 0;
+            opacity: 0;
+        }
+    }
+    .nowrap {
+        white-space: nowrap ;
+    }
+
+</style>
+<script>
+    function change_page_view(btn){
+        if(document.body.style.filter == "invert(0)") {
+            document.body.style.filter = "invert(1)";
+            btn.innerHTML="Day View";
+        }
+        else{
+            document.body.style.filter = "invert(0)";
+            btn.innerHTML="Night View";
+        }
+    }
+</script>
+<body >
+<?php
+if(empty($profile_img->image)){
+    $image = "http://getdrawings.com/free-icon/person-png-icon-75.png";
+}else{
+    $image =$profile_img->image;
+}
+?>
+<br><br><br>
+<button  onclick="change_page_view(this)">Night View</button>
+<div style="width: 80%; margin: auto">
+    <div class="row" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 1px 0 2px 0 rgba(0, 0, 0, 0.2), -1px -1px 2px 0 rgba(0, 0, 0, 0.2);">
+        <div class="col-12" style="padding: 7px"></div>
+        <div class="col-3">
+            <div style="margin: auto; border-radius: 25px;width: 50px; height: 50px;background-image: url('/{!! $image !!}');background-size: cover;background-position: center ">            </div>
+        </div>
+        <div class="col-9">
+            <h5 style="margin: auto">{!!Auth::user()->name!!}</h5>
+            <p style="margin: auto">TF{!!Auth::user()->id!!}</p>
+        </div>
+        <div class="col-12" style="padding: 7px"></div>
+
+        <div class="col-12">
+            <textarea rows="5" style="width:100%;padding-bottom: 0;" name='description' id="desc" placeholder="Express yourself here...."></textarea>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-4">
+                    <label for="imgupload">
+                        <img style="height:2.5em;margin-top:2px;float: left" src="/2019/profile/photo-camera.svg"/>
+                    </label>
+                    <span><input type="file" id="imgupload" name='image' accept=".png, .jpg, .jpeg" style="display:none;"></span>
+                </div>
+                <div class="col-4">
+                    <a id="remove" aria-label="Close Account Info Modal Box" style="cursor:pointer;position:relative;top:1em;right:1em;">&times;</a>
+
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary" id="submitpost" style="float:right;">Post</button>
+                </div>
+                <div class="newpost" id="container-section">
+                    <div  class="upload-details" style="position:absolute;display:flex;" >
+                        <div class="upload-details" style="position:relative;display:flex; width: 2em;">
+                            <output id="list">
+                            </output>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" style="border-radius: 30px;border: 1px solid blue;margin: auto;height: 40px">
+    <div class="" style="height: 30px; margin: auto" >
+        <div style="background-image: url('https://sm.mashable.com/t/mashable_sea/photo/default/man-fakes-death-cat-q6u_2z9w.960.png'); border-radius: 50%; height: 30px;width: 30px;background-size: cover;background-position: center;">
+
+        </div>
+    </div>
+    <div class="" style=" width: 60%;height: 30px; margin: auto">
+        <textarea name="" id=""  rows="1" style="width: 100%!important; border-radius: 25px;max-height: 100px!important; " placeholder="Express your feelings here"></textarea>
+    </div>
+
+    <div class="" style="width: 30px; margin: auto">
+        <div style="background-image: url('/2019/profile/photo-camera.svg'); background-size:cover ;height: 30px"></div>
+    </div>
+    <div class="" style="margin: auto; width: 30px">
+        <div style="background-image: url('/2019/profile/paper-plane.svg'); background-size:cover ;height: 30px"></div>
+    </div>
 </div>
 <div class="third-type">
     <div class="user-details">
+
         <div class="user-avatar-thumbnail left-position">
-            <img class="left-position" src="https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=format&fit=crop&w=1500&h=995&q=80&cs=tinysrgb&crop=&bg=" alt="Avatar">
-            <h5 class="left-position">"XXX"</h5>
+
+            <img class="left-position" src="{!! $image !!}" alt="Avatar">
+            <h5 class="left-position">{!!Auth::user()->name!!}</h5>
         </div>
-{{--        <div class="user-login right-position">--}}
-{{--            <h5>{!! $blog->date_uploaded  !!}</h5>--}}
-{{--        </div>--}}
     </div>
+    <form method="post" id="blog_post" enctype="multipart/form-data" action="{{route('blog_post')}}">
+        {{csrf_field()}}
     <div class="content">
-{{--        @if($blog->image != NULL)<div class="img-section clearfix"><img src="{!! $blog->image !!}" alt="insta"></div>--}}
-{{--        @endif--}}
-{{--        <p class="description" id="desc{!! $blog->id !!}">{!! $blog->description !!}</p>--}}
-        <textarea rows="5" style="width:100%" placeholder="Express yourself here...."></textarea>
+        <textarea rows="5" style="width:100%;padding-bottom: 0;" name='description' id="desc" placeholder="Express yourself here...."></textarea>
     </div>
-    <div class="container" id="container-section">
-        <div class="icon-details right-position">
-{{--            <a href="#" id="likes{!! $blog->id !!}"><i class="fa fa-heart-o" id="likes-color{!! $blog->id !!}"></i></a><label id="likes-counter{!! $blog->id !!}"></label><span> likes</span>--}}
-       <span><input type="file" id="imgupload">Upload Image</span> </div>
-        <button type="button" class="btn btn-primary">Post</button>
+    <div class="newpost" id="container-section">
+        <div  class="upload-details" style="position:absolute;display:flex;" >
+            <div class="upload-details" style="position:relative;display:flex; width: 2em;">
+                <label for="imgupload">
+                <img style="height:3em;margin-top:2px;float: left" src="https://icon-library.net/images/upload-photo-icon/upload-photo-icon-21.jpg"/>
+                </label>
+                <span><input type="file" id="imgupload" name='image' accept=".png, .jpg, .jpeg" style="display:none;">
+                </span>
+                <output id="list">
+                    <a id="remove" aria-label="Close Account Info Modal Box" style="cursor:pointer;position:relative;top:1em;right:1em;">&times;</a>
+                </output>
+            </div>
+        <button type="button" class="btn btn-primary" id="submitpost" style="float:right;">Post</button>
+        </div>
     </div>
+    </form>
+    <div id="snackbar">Your post will be approved soon..</div>
 
     <div class="clearfix"></div>
 </div>
-@foreach($blog_row as $blog)
+
+@foreach($blog_row as $index => $blog)
     <div class="third-type">
         <div class="user-details">
             <div class="user-avatar-thumbnail left-position">
-                <img class="left-position" src="https://images.unsplash.com/photo-1457282367193-e3b79e38f207?dpr=1&auto=format&fit=crop&w=1500&h=995&q=80&cs=tinysrgb&crop=&bg=" alt="Avatar">
-                <h5 class="left-position">{!! $blog->user_id !!}</h5>
+                <img class="left-position" src="{!! $blog->profile_img !!}" alt="Avatar">
+                <div style="width:100%">
+                <h5 class="left-position">{!! $blog->name !!}</h5><br>
+               <span class=" nowrap"><h6>{!! $blog->date_uploaded  !!}</h6></span>
+                </div>
             </div>
-            <div class="user-login right-position">
-                <h5>{!! $blog->date_uploaded  !!}</h5>
-            </div>
+
         </div>
         <div class="content">
         @if($blog->image != NULL)<div class="img-section clearfix"><img src="{!! $blog->image !!}" alt="insta"></div>
@@ -315,42 +461,121 @@
         </div>
         <div class="container" id="container-section">
             <div class="icon-details right-position">
-                <a href="#" id="likes{!! $blog->id !!}"><i class="fa fa-heart-o" id="likes-color{!! $blog->id !!}"></i></a><label id="likes-counter{!! $blog->id !!}"></label><span> likes</span>
+                @if($liked[$index]=='[]')
+                <a href="#" onclick="like(this,{!! $blog->id !!},{!! Auth::user()->id !!})" class="fa fa-heart-o" id="likes{!! $blog->id !!}"></a>
+                @else
+                <a href="#" style="color:red" class="fa fa-heart" onclick="dislike(this,{!! $blog->id !!} ,{!! Auth::user()->id !!})" id="likes{!! $blog->id !!}"></a>
+                @endif
+                <span id="likes-counter{!! $blog->id !!}">{!! $likes_count[$index] !!} likes</span>
             </div>
         </div>
         <div class="clearfix"></div>
     </div>
     <script>
+        function like(icon, blog_id, user_id){
+            icon.style.color="red";
+            icon.className="fa fa-heart";
+            document.getElementById('likes-counter'+blog_id).innerHTML=(parseInt(document.getElementById('likes-counter'+blog_id).innerHTML.toString().charAt(0))+1).toString()+" likes";
+            icon.setAttribute('onclick','dislike(this,'+blog_id+')');
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name = "csrf-token"]').attr('content'),
+                },
+                url: "/blog/update",
+                type: "POST",
+                data: {"blog_id":blog_id,
+                    "user_id":user_id,
+                    "like":'true',
+
+                },
+            });
+
+
+        }
+        function dislike(icon, blog_id, user_id){
+            icon.style.color="";
+            icon.className="fa fa-heart-o";
+
+
+            document.getElementById('likes-counter'+blog_id).innerHTML=(parseInt(document.getElementById('likes-counter'+blog_id).innerHTML.toString().charAt(0))-1).toString()+" likes";
+            icon.setAttribute('onclick','like(this,'+blog_id+')');
+
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name = "csrf-token"]').attr('content'),
+                },
+                url: "/blog/update",
+                type: "POST",
+                data: {"blog_id":blog_id,
+                    "user_id":user_id,
+                    "like":'false',
+
+                },
+            });
+        }
+        window.onload= reload;
+            function reload() {
+            if (sessionStorage.getItem('clicked')) {
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function () {
+                    x.className = x.className.replace("show", "");
+                }, 3000);
+                sessionStorage.removeItem('clicked');
+            }
+        }
         //likes add and remove - increase count
-        var count = 0;
-        var clickCount = 0;
-        var previousCount = 5;
-        document.getElementById("likes-counter{!! $blog->id !!}").innerHTML = previousCount;
-        document.getElementById("likes{!! $blog->id !!}").addEventListener("click", function(){
-            clickCount = clickCount+1;
-            if(clickCount%2==0){
-                var testing1 = document.getElementsByClassName("fa-heart")[0];
-                testing1.className="fa fa-heart-o"
-                testing1.style.color = "black";
-                document.getElementById("likes-color{!! $blog->id !!}").style.color = "black";
-                document.getElementById("likes-counter{!! $blog->id !!}").innerHTML = previousCount;
+        document.getElementById("imgupload").onchange=function() {
+            var reader = new FileReader();
+
+            // Closure to capture the file information.
+            reader.onload = function (e) {
+
+                    // Render thumbnail.
+                    var span = document.createElement('span');
+                    span.innerHTML =
+                        [
+                            '<img style="height: 40px; width:30px; border: 1px solid #000; margin: 5px" src="',
+                            e.target.result,
+                            '"/>'
+                        ].join('');
+                    span.id="imageuploaded";
+                    document.getElementById('list').insertBefore(span, null);
+                    document.getElementById('remove').style.display="block";
+            };
+
+            // Read in the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+        };
+        document.getElementById("remove").onclick=function(){
+            //alert("OK Remove");
+            var element = document.getElementById("imageuploaded");
+            element.parentNode.removeChild(element);
+            document.getElementById('remove').style.display="none";
+            document.getElementById('imgupload').value='';
+        };
+
+        document.getElementById('submitpost').onclick=function(){
+
+            if(document.getElementById('desc').value=='' && document.getElementById('imgupload').value==''){
+                alert('Description and Image both can\'t be empty');
             }
-            else{
-                var testing = document.getElementsByClassName("fa-heart-o")[0];
-                testing.className="fa fa-heart"
-                testing.style.color = "red";
-                document.getElementById("likes-counter{!! $blog->id !!}").innerHTML = previousCount + 1;
+                else
+            {
+                sessionStorage.setItem('clicked', 'true');
+                document.getElementById('blog_post').submit();
+                // window.setTimeout(function(){ window.location.replace("/blog"); },0);
+
+
+
 
             }
-            count = count+1;
-        });
-        {{--document.getElementById("desc{{!!$blog->id}}").addEventListener("click",function(){--}}
-        {{--    document.getElementById("desc{{!!$blog->id}}").style.overflow="visible";--}}
+        }
 
-        {{--});--}}
     </script>
 @endforeach
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript">
+</script>
 </body>
-</html>
-
 </html>
